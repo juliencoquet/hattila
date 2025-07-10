@@ -1,0 +1,31 @@
+{
+  "service_account_key_file": "credentials/service-account.json",
+  "date_ranges": [
+    {
+      "name": "last_30_days",
+      "start_date": "30daysAgo",
+      "end_date": "yesterday"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "sessions"
+    },
+    {
+      "name": "activeUsers"
+    },
+    {
+      "name": "screenPageViews"
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "date"
+    },
+    {
+      "name": "sessionSource"
+    }
+  ],
+  "output_format": "csv",
+  "output_directory": "results"
+}

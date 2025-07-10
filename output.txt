@@ -1,0 +1,625 @@
+Configuration saved to: config.json
+Authenticating with service account key: credentials/service-account.json
+Successfully authenticated with Google Analytics 4 API
+Authentication successful
+Loaded 30 URLs from urls.csv
+
+Processing GA4 property: Property 427363317 (427363317)
+Collecting property-level data...
+Collected 400 rows of data
+Analyzing property-level data...
+Saved analysis results to results/Property_427363317_20250411_220357_analysis.json
+Saved raw data to results/Property_427363317_20250411_220357_raw_data.csv
+
+Property-Level Analysis Results for Property 427363317:
+Date Range: 2025-03-12 to 2025-04-10
+
+Insights:
+1. screenPageViews_last_30_days has decreased by 96.3% over the period
+2. The top traffic source is 'youtube.com' accounting for 7.5% of traffic
+3. Analysis for Property 427363317 shows 2 key findings across traffic sources, geographic distribution, and user engagement.
+
+Performing URL-specific analysis for 30 URLs...
+  Resuming PageSpeed quota tracking: 100/100 requests used today
+Collecting page data for the property...
+Sending general data request to GA4 API...
+  Metrics: ['sessions', 'activeUsers', 'screenPageViews']
+  Dimensions: ['date', 'sessionSource', 'pagePath']
+Received response with 25933 rows
+
+Available metrics and dimensions:
+  - date: str (example: 20250410)
+  - sessionSource: str (example: google)
+  - pagePath: str (example: /fr/)
+  - sessions: str (example: 77)
+  - activeUsers: str (example: 56)
+  - screenPageViews: str (example: 266)
+
+
+Collecting conversion data for the property...
+Sending conversion data request to GA4 API...
+  Metrics: ['keyEvents', 'ecommercePurchases', 'transactions', 'addToCarts', 'checkouts']
+  Dimensions: ['pagePath', 'date', 'eventName']
+Received conversion data with 19024 rows
+Collecting marketing channel data for the property...
+Sending channel data request to GA4 API...
+  Metrics: ['sessions', 'activeUsers', 'keyEvents']
+  Dimensions: ['pagePath', 'sessionSource', 'sessionMedium', 'sessionCampaignId']
+Received channel data with 12465 rows
+Collected data for 25933 page paths
+Sample page paths:
+  - /fr/
+  - /fr/panier
+  - /fr/7396-arc-a-poulies-bowtech-revolt-xl.html
+  - /fr/index.php
+  - /fr/6067-arc-a-poulies-ek-archery-whipshot-a-chargeur-6-fleches.html
+
+[1/30] Analyzing URL: https://www.archerie.fr/fr/78-arcs
+  Extracted path '/fr/78-arcs' from URL 'https://www.archerie.fr/fr/78-arcs'
+  URL path: /fr/78-arcs
+  Found 100 rows with exact path match
+  Found 58 rows with exact path match
+  Found 14 rows with exact path match
+  Found 7 insights
+
+[2/30] Analyzing URL: https://www.archerie.fr/fr/80-arcs-a-poulie
+  Extracted path '/fr/80-arcs-a-poulie' from URL 'https://www.archerie.fr/fr/80-arcs-a-poulie'
+  URL path: /fr/80-arcs-a-poulie
+  Found 87 rows with exact path match
+  Found 62 rows with exact path match
+  Found 16 rows with exact path match
+  Found 7 insights
+
+[3/30] Analyzing URL: https://www.archerie.fr/fr/79-arcs-recurve
+  Extracted path '/fr/79-arcs-recurve' from URL 'https://www.archerie.fr/fr/79-arcs-recurve'
+  URL path: /fr/79-arcs-recurve
+  Found 68 rows with exact path match
+  Found 53 rows with exact path match
+  Found 14 rows with exact path match
+  Found 7 insights
+
+[4/30] Analyzing URL: https://www.archerie.fr/fr/698-arcs-a-cheval
+  Extracted path '/fr/698-arcs-a-cheval' from URL 'https://www.archerie.fr/fr/698-arcs-a-cheval'
+  URL path: /fr/698-arcs-a-cheval
+  Found 34 rows with exact path match
+  Found 35 rows with exact path match
+  Found 7 rows with exact path match
+  Found 7 insights
+
+[5/30] Analyzing URL: https://www.archerie.fr/fr/699-arcs-long-anglais
+  Extracted path '/fr/699-arcs-long-anglais' from URL 'https://www.archerie.fr/fr/699-arcs-long-anglais'
+  URL path: /fr/699-arcs-long-anglais
+  Found 42 rows with exact path match
+  Found 38 rows with exact path match
+  Found 6 rows with exact path match
+  Found 7 insights
+
+[6/30] Analyzing URL: https://www.archerie.fr/fr/706-arcs-recurve-demontables
+  Extracted path '/fr/706-arcs-recurve-demontables' from URL 'https://www.archerie.fr/fr/706-arcs-recurve-demontables'
+  URL path: /fr/706-arcs-recurve-demontables
+  Found 67 rows with exact path match
+  Found 42 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[7/30] Analyzing URL: https://www.archerie.fr/fr/660-poignees-d-arcs
+  Extracted path '/fr/660-poignees-d-arcs' from URL 'https://www.archerie.fr/fr/660-poignees-d-arcs'
+  URL path: /fr/660-poignees-d-arcs
+  Found 69 rows with exact path match
+  Found 49 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[8/30] Analyzing URL: https://www.archerie.fr/fr/607-branches-d-arcs
+  Extracted path '/fr/607-branches-d-arcs' from URL 'https://www.archerie.fr/fr/607-branches-d-arcs'
+  URL path: /fr/607-branches-d-arcs
+  Found 65 rows with exact path match
+  Found 49 rows with exact path match
+  Found 13 rows with exact path match
+  Found 7 insights
+
+[9/30] Analyzing URL: https://www.archerie.fr/fr/610-arcs-a-poulies-de-chasse
+  Extracted path '/fr/610-arcs-a-poulies-de-chasse' from URL 'https://www.archerie.fr/fr/610-arcs-a-poulies-de-chasse'
+  URL path: /fr/610-arcs-a-poulies-de-chasse
+  Found 83 rows with exact path match
+  Found 53 rows with exact path match
+  Found 16 rows with exact path match
+  Found 7 insights
+
+[10/30] Analyzing URL: https://www.archerie.fr/fr/685-kits-d-arcs-a-poulies
+  Extracted path '/fr/685-kits-d-arcs-a-poulies' from URL 'https://www.archerie.fr/fr/685-kits-d-arcs-a-poulies'
+  URL path: /fr/685-kits-d-arcs-a-poulies
+  Found 61 rows with exact path match
+  Found 46 rows with exact path match
+  Found 12 rows with exact path match
+  Found 7 insights
+
+[11/30] Analyzing URL: https://www.archerie.fr/fr/81-fleches
+  Extracted path '/fr/81-fleches' from URL 'https://www.archerie.fr/fr/81-fleches'
+  URL path: /fr/81-fleches
+  Found 79 rows with exact path match
+  Found 50 rows with exact path match
+  Found 16 rows with exact path match
+  Found 7 insights
+
+[12/30] Analyzing URL: https://www.archerie.fr/fr/621-tubes-darcherie
+  Extracted path '/fr/621-tubes-darcherie' from URL 'https://www.archerie.fr/fr/621-tubes-darcherie'
+  URL path: /fr/621-tubes-darcherie
+  Found 84 rows with exact path match
+  Found 53 rows with exact path match
+  Found 17 rows with exact path match
+  Found 7 insights
+
+[13/30] Analyzing URL: https://www.archerie.fr/fr/1188-futs-en-bois
+  Extracted path '/fr/1188-futs-en-bois' from URL 'https://www.archerie.fr/fr/1188-futs-en-bois'
+  URL path: /fr/1188-futs-en-bois
+  Found 21 rows with exact path match
+  Found 19 rows with exact path match
+  Found 7 rows with exact path match
+  Found 7 insights
+
+[14/30] Analyzing URL: https://www.archerie.fr/fr/601-equipement-de-l-archer
+  Extracted path '/fr/601-equipement-de-l-archer' from URL 'https://www.archerie.fr/fr/601-equipement-de-l-archer'
+  URL path: /fr/601-equipement-de-l-archer
+  Found 49 rows with exact path match
+  Found 35 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[15/30] Analyzing URL: https://www.archerie.fr/fr/96-carquois
+  Extracted path '/fr/96-carquois' from URL 'https://www.archerie.fr/fr/96-carquois'
+  URL path: /fr/96-carquois
+  Found 49 rows with exact path match
+  Found 45 rows with exact path match
+  Found 12 rows with exact path match
+  Found 7 insights
+
+[16/30] Analyzing URL: https://www.archerie.fr/fr/635-palettes
+  Extracted path '/fr/635-palettes' from URL 'https://www.archerie.fr/fr/635-palettes'
+  URL path: /fr/635-palettes
+  Found 50 rows with exact path match
+  Found 48 rows with exact path match
+  Found 10 rows with exact path match
+  Found 7 insights
+
+[17/30] Analyzing URL: https://www.archerie.fr/fr/633-protege-bras
+  Extracted path '/fr/633-protege-bras' from URL 'https://www.archerie.fr/fr/633-protege-bras'
+  URL path: /fr/633-protege-bras
+  Found 58 rows with exact path match
+  Found 51 rows with exact path match
+  Found 10 rows with exact path match
+  Found 7 insights
+
+[18/30] Analyzing URL: https://www.archerie.fr/fr/636-decocheurs
+  Extracted path '/fr/636-decocheurs' from URL 'https://www.archerie.fr/fr/636-decocheurs'
+  URL path: /fr/636-decocheurs
+  Found 54 rows with exact path match
+  Found 39 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[19/30] Analyzing URL: https://www.archerie.fr/fr/603-equipement-de-l-arc
+  Extracted path '/fr/603-equipement-de-l-arc' from URL 'https://www.archerie.fr/fr/603-equipement-de-l-arc'
+  URL path: /fr/603-equipement-de-l-arc
+  Found 34 rows with exact path match
+  Found 29 rows with exact path match
+  Found 6 rows with exact path match
+  Found 7 insights
+
+[20/30] Analyzing URL: https://www.archerie.fr/fr/82-viseurs
+  Extracted path '/fr/82-viseurs' from URL 'https://www.archerie.fr/fr/82-viseurs'
+  URL path: /fr/82-viseurs
+  Found 34 rows with exact path match
+  Found 28 rows with exact path match
+  Found 9 rows with exact path match
+  Found 4 insights
+
+[21/30] Analyzing URL: https://www.archerie.fr/fr/643-repose-fleches
+  Extracted path '/fr/643-repose-fleches' from URL 'https://www.archerie.fr/fr/643-repose-fleches'
+  URL path: /fr/643-repose-fleches
+  Found 54 rows with exact path match
+  Found 49 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[22/30] Analyzing URL: https://www.archerie.fr/fr/644-berger-button
+  Extracted path '/fr/644-berger-button' from URL 'https://www.archerie.fr/fr/644-berger-button'
+  URL path: /fr/644-berger-button
+  Found 43 rows with exact path match
+  Found 34 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[23/30] Analyzing URL: https://www.archerie.fr/fr/604-stabilisateur-arc
+  Extracted path '/fr/604-stabilisateur-arc' from URL 'https://www.archerie.fr/fr/604-stabilisateur-arc'
+  URL path: /fr/604-stabilisateur-arc
+  Found 26 rows with exact path match
+  Found 23 rows with exact path match
+  Found 5 rows with exact path match
+  Found 5 insights
+
+[24/30] Analyzing URL: https://www.archerie.fr/fr/649-stabilisation
+  Extracted path '/fr/649-stabilisation' from URL 'https://www.archerie.fr/fr/649-stabilisation'
+  URL path: /fr/649-stabilisation
+  Found 56 rows with exact path match
+  Found 45 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[25/30] Analyzing URL: https://www.archerie.fr/fr/688-transport-et-protection
+  Extracted path '/fr/688-transport-et-protection' from URL 'https://www.archerie.fr/fr/688-transport-et-protection'
+  URL path: /fr/688-transport-et-protection
+  Found 20 rows with exact path match
+  Found 24 rows with exact path match
+  Found 5 rows with exact path match
+  Found 7 insights
+
+[26/30] Analyzing URL: https://www.archerie.fr/fr/690-housses
+  Extracted path '/fr/690-housses' from URL 'https://www.archerie.fr/fr/690-housses'
+  URL path: /fr/690-housses
+  Found 29 rows with exact path match
+  Found 35 rows with exact path match
+  Found 9 rows with exact path match
+  Found 6 insights
+
+[27/30] Analyzing URL: https://www.archerie.fr/fr/689-sac-a-dos
+  Extracted path '/fr/689-sac-a-dos' from URL 'https://www.archerie.fr/fr/689-sac-a-dos'
+  URL path: /fr/689-sac-a-dos
+  Found 37 rows with exact path match
+  Found 37 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[28/30] Analyzing URL: https://www.archerie.fr/fr/602-cibles-archerie
+  Extracted path '/fr/602-cibles-archerie' from URL 'https://www.archerie.fr/fr/602-cibles-archerie'
+  URL path: /fr/602-cibles-archerie
+  Found 62 rows with exact path match
+  Found 54 rows with exact path match
+  Found 15 rows with exact path match
+  Found 5 insights
+
+[29/30] Analyzing URL: https://www.archerie.fr/fr/720-cible-mousse
+  Extracted path '/fr/720-cible-mousse' from URL 'https://www.archerie.fr/fr/720-cible-mousse'
+  URL path: /fr/720-cible-mousse
+  Found 59 rows with exact path match
+  Found 57 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[30/30] Analyzing URL: https://www.archerie.fr/fr/642-blasons
+  Extracted path '/fr/642-blasons' from URL 'https://www.archerie.fr/fr/642-blasons'
+  URL path: /fr/642-blasons
+  Found 37 rows with exact path match
+  Found 41 rows with exact path match
+  Found 7 rows with exact path match
+  Found 7 insights
+
+PageSpeed analysis is disabled (use --pagespeed to enable)
+
+English analysis saved to: results/Property_427363317_20250411_220406_url_analysis_en.json
+French analysis saved to: results/Property_427363317_20250411_220406_url_analysis_fr.json
+
+URL Analysis Complete:
+  - Successfully analyzed: 30/30 URLs
+
+Sample URL Insights:
+
+https://www.archerie.fr/fr/78-arcs:
+  1. This URL received 711 sessions in the analyzed period
+  2. This URL received 2174 pageviews in the analyzed period
+  3. The top marketing channel for this URL is 'paid-search' bringing 329 sessions (46.3% of traffic)
+
+https://www.archerie.fr/fr/80-arcs-a-poulie:
+  1. This URL received 506 sessions in the analyzed period
+  2. This URL received 1176 pageviews in the analyzed period
+  3. The top marketing channel for this URL is 'direct' bringing 196 sessions (38.7% of traffic)
+
+https://www.archerie.fr/fr/79-arcs-recurve:
+  1. This URL received 194 sessions in the analyzed period
+  2. This URL received 442 pageviews in the analyzed period
+  3. The top marketing channel for this URL is 'direct' bringing 85 sessions (44.0% of traffic)
+
+(See the JSON output file for complete URL analysis)
+
+Results saved to results
+Analysis complete!
+Configuration saved to: config.json
+Authenticating with service account key: credentials/service-account.json
+Successfully authenticated with Google Analytics 4 API
+Authentication successful
+Loaded 30 URLs from urls.csv
+
+Processing GA4 property: Property 427363317 (427363317)
+Collecting data...
+Collected 400 rows of data
+Analyzing data...
+Saved analysis results to results/Property_427363317_20250411_220406_analysis.json
+Saved raw data to results/Property_427363317_20250411_220406_raw_data.csv
+
+Generating Google Doc report...
+Error generating recommendations: <HttpError 400 when requesting https://docs.googleapis.com/v1/documents/1kU2TaR28SUHY4BavhWiC1kHMGCp7b6ULJTtATSzQ7bA:batchUpdate?alt=json returned "Invalid requests[0].insertText: Index 148 must be less than the end index of the referenced segment, 148.". Details: "Invalid requests[0].insertText: Index 148 must be less than the end index of the referenced segment, 148.">
+Error formatting document: <HttpError 400 when requesting https://docs.googleapis.com/v1/documents/1kU2TaR28SUHY4BavhWiC1kHMGCp7b6ULJTtATSzQ7bA:batchUpdate?alt=json returned "Invalid JSON payload received. Unknown name "insertTableOfContents" at 'requests[1]': Cannot find field.". Details: "[{'@type': 'type.googleapis.com/google.rpc.BadRequest', 'fieldViolations': [{'field': 'requests[1]', 'description': 'Invalid JSON payload received. Unknown name "insertTableOfContents" at \'requests[1]\': Cannot find field.'}]}]">
+Google Doc report created: https://docs.google.com/document/d/1kU2TaR28SUHY4BavhWiC1kHMGCp7b6ULJTtATSzQ7bA/edit
+
+Performing URL-specific analysis for 30 URLs...
+  Resuming PageSpeed quota tracking: 100/100 requests used today
+Collecting page data for the property...
+Sending general data request to GA4 API...
+  Metrics: ['sessions', 'activeUsers', 'screenPageViews']
+  Dimensions: ['date', 'sessionSource', 'pagePath']
+Received response with 25933 rows
+
+Available metrics and dimensions:
+  - date: str (example: 20250410)
+  - sessionSource: str (example: google)
+  - pagePath: str (example: /fr/)
+  - sessions: str (example: 77)
+  - activeUsers: str (example: 56)
+  - screenPageViews: str (example: 266)
+
+
+Collecting conversion data for the property...
+Sending conversion data request to GA4 API...
+  Metrics: ['keyEvents', 'ecommercePurchases', 'transactions', 'addToCarts', 'checkouts']
+  Dimensions: ['pagePath', 'date', 'eventName']
+Received conversion data with 19024 rows
+Collecting marketing channel data for the property...
+Sending channel data request to GA4 API...
+  Metrics: ['sessions', 'activeUsers', 'keyEvents']
+  Dimensions: ['pagePath', 'sessionSource', 'sessionMedium', 'sessionCampaignId']
+Received channel data with 12465 rows
+Collected data for 25933 page paths
+Sample page paths:
+  - /fr/
+  - /fr/panier
+  - /fr/7396-arc-a-poulies-bowtech-revolt-xl.html
+  - /fr/index.php
+  - /fr/6067-arc-a-poulies-ek-archery-whipshot-a-chargeur-6-fleches.html
+
+[1/30] Analyzing URL: https://www.archerie.fr/fr/78-arcs
+  Extracted path '/fr/78-arcs' from URL 'https://www.archerie.fr/fr/78-arcs'
+  URL path: /fr/78-arcs
+  Found 100 rows with exact path match
+  Found 58 rows with exact path match
+  Found 14 rows with exact path match
+  Found 7 insights
+
+[2/30] Analyzing URL: https://www.archerie.fr/fr/80-arcs-a-poulie
+  Extracted path '/fr/80-arcs-a-poulie' from URL 'https://www.archerie.fr/fr/80-arcs-a-poulie'
+  URL path: /fr/80-arcs-a-poulie
+  Found 87 rows with exact path match
+  Found 62 rows with exact path match
+  Found 16 rows with exact path match
+  Found 7 insights
+
+[3/30] Analyzing URL: https://www.archerie.fr/fr/79-arcs-recurve
+  Extracted path '/fr/79-arcs-recurve' from URL 'https://www.archerie.fr/fr/79-arcs-recurve'
+  URL path: /fr/79-arcs-recurve
+  Found 68 rows with exact path match
+  Found 53 rows with exact path match
+  Found 14 rows with exact path match
+  Found 7 insights
+
+[4/30] Analyzing URL: https://www.archerie.fr/fr/698-arcs-a-cheval
+  Extracted path '/fr/698-arcs-a-cheval' from URL 'https://www.archerie.fr/fr/698-arcs-a-cheval'
+  URL path: /fr/698-arcs-a-cheval
+  Found 34 rows with exact path match
+  Found 35 rows with exact path match
+  Found 7 rows with exact path match
+  Found 7 insights
+
+[5/30] Analyzing URL: https://www.archerie.fr/fr/699-arcs-long-anglais
+  Extracted path '/fr/699-arcs-long-anglais' from URL 'https://www.archerie.fr/fr/699-arcs-long-anglais'
+  URL path: /fr/699-arcs-long-anglais
+  Found 42 rows with exact path match
+  Found 38 rows with exact path match
+  Found 6 rows with exact path match
+  Found 7 insights
+
+[6/30] Analyzing URL: https://www.archerie.fr/fr/706-arcs-recurve-demontables
+  Extracted path '/fr/706-arcs-recurve-demontables' from URL 'https://www.archerie.fr/fr/706-arcs-recurve-demontables'
+  URL path: /fr/706-arcs-recurve-demontables
+  Found 67 rows with exact path match
+  Found 42 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[7/30] Analyzing URL: https://www.archerie.fr/fr/660-poignees-d-arcs
+  Extracted path '/fr/660-poignees-d-arcs' from URL 'https://www.archerie.fr/fr/660-poignees-d-arcs'
+  URL path: /fr/660-poignees-d-arcs
+  Found 69 rows with exact path match
+  Found 49 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[8/30] Analyzing URL: https://www.archerie.fr/fr/607-branches-d-arcs
+  Extracted path '/fr/607-branches-d-arcs' from URL 'https://www.archerie.fr/fr/607-branches-d-arcs'
+  URL path: /fr/607-branches-d-arcs
+  Found 65 rows with exact path match
+  Found 49 rows with exact path match
+  Found 13 rows with exact path match
+  Found 7 insights
+
+[9/30] Analyzing URL: https://www.archerie.fr/fr/610-arcs-a-poulies-de-chasse
+  Extracted path '/fr/610-arcs-a-poulies-de-chasse' from URL 'https://www.archerie.fr/fr/610-arcs-a-poulies-de-chasse'
+  URL path: /fr/610-arcs-a-poulies-de-chasse
+  Found 83 rows with exact path match
+  Found 53 rows with exact path match
+  Found 16 rows with exact path match
+  Found 7 insights
+
+[10/30] Analyzing URL: https://www.archerie.fr/fr/685-kits-d-arcs-a-poulies
+  Extracted path '/fr/685-kits-d-arcs-a-poulies' from URL 'https://www.archerie.fr/fr/685-kits-d-arcs-a-poulies'
+  URL path: /fr/685-kits-d-arcs-a-poulies
+  Found 61 rows with exact path match
+  Found 46 rows with exact path match
+  Found 12 rows with exact path match
+  Found 7 insights
+
+[11/30] Analyzing URL: https://www.archerie.fr/fr/81-fleches
+  Extracted path '/fr/81-fleches' from URL 'https://www.archerie.fr/fr/81-fleches'
+  URL path: /fr/81-fleches
+  Found 79 rows with exact path match
+  Found 50 rows with exact path match
+  Found 16 rows with exact path match
+  Found 7 insights
+
+[12/30] Analyzing URL: https://www.archerie.fr/fr/621-tubes-darcherie
+  Extracted path '/fr/621-tubes-darcherie' from URL 'https://www.archerie.fr/fr/621-tubes-darcherie'
+  URL path: /fr/621-tubes-darcherie
+  Found 84 rows with exact path match
+  Found 53 rows with exact path match
+  Found 17 rows with exact path match
+  Found 7 insights
+
+[13/30] Analyzing URL: https://www.archerie.fr/fr/1188-futs-en-bois
+  Extracted path '/fr/1188-futs-en-bois' from URL 'https://www.archerie.fr/fr/1188-futs-en-bois'
+  URL path: /fr/1188-futs-en-bois
+  Found 21 rows with exact path match
+  Found 19 rows with exact path match
+  Found 7 rows with exact path match
+  Found 7 insights
+
+[14/30] Analyzing URL: https://www.archerie.fr/fr/601-equipement-de-l-archer
+  Extracted path '/fr/601-equipement-de-l-archer' from URL 'https://www.archerie.fr/fr/601-equipement-de-l-archer'
+  URL path: /fr/601-equipement-de-l-archer
+  Found 49 rows with exact path match
+  Found 35 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[15/30] Analyzing URL: https://www.archerie.fr/fr/96-carquois
+  Extracted path '/fr/96-carquois' from URL 'https://www.archerie.fr/fr/96-carquois'
+  URL path: /fr/96-carquois
+  Found 49 rows with exact path match
+  Found 45 rows with exact path match
+  Found 12 rows with exact path match
+  Found 7 insights
+
+[16/30] Analyzing URL: https://www.archerie.fr/fr/635-palettes
+  Extracted path '/fr/635-palettes' from URL 'https://www.archerie.fr/fr/635-palettes'
+  URL path: /fr/635-palettes
+  Found 50 rows with exact path match
+  Found 48 rows with exact path match
+  Found 10 rows with exact path match
+  Found 7 insights
+
+[17/30] Analyzing URL: https://www.archerie.fr/fr/633-protege-bras
+  Extracted path '/fr/633-protege-bras' from URL 'https://www.archerie.fr/fr/633-protege-bras'
+  URL path: /fr/633-protege-bras
+  Found 58 rows with exact path match
+  Found 51 rows with exact path match
+  Found 10 rows with exact path match
+  Found 7 insights
+
+[18/30] Analyzing URL: https://www.archerie.fr/fr/636-decocheurs
+  Extracted path '/fr/636-decocheurs' from URL 'https://www.archerie.fr/fr/636-decocheurs'
+  URL path: /fr/636-decocheurs
+  Found 54 rows with exact path match
+  Found 39 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[19/30] Analyzing URL: https://www.archerie.fr/fr/603-equipement-de-l-arc
+  Extracted path '/fr/603-equipement-de-l-arc' from URL 'https://www.archerie.fr/fr/603-equipement-de-l-arc'
+  URL path: /fr/603-equipement-de-l-arc
+  Found 34 rows with exact path match
+  Found 29 rows with exact path match
+  Found 6 rows with exact path match
+  Found 7 insights
+
+[20/30] Analyzing URL: https://www.archerie.fr/fr/82-viseurs
+  Extracted path '/fr/82-viseurs' from URL 'https://www.archerie.fr/fr/82-viseurs'
+  URL path: /fr/82-viseurs
+  Found 34 rows with exact path match
+  Found 28 rows with exact path match
+  Found 9 rows with exact path match
+  Found 4 insights
+
+[21/30] Analyzing URL: https://www.archerie.fr/fr/643-repose-fleches
+  Extracted path '/fr/643-repose-fleches' from URL 'https://www.archerie.fr/fr/643-repose-fleches'
+  URL path: /fr/643-repose-fleches
+  Found 54 rows with exact path match
+  Found 49 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[22/30] Analyzing URL: https://www.archerie.fr/fr/644-berger-button
+  Extracted path '/fr/644-berger-button' from URL 'https://www.archerie.fr/fr/644-berger-button'
+  URL path: /fr/644-berger-button
+  Found 43 rows with exact path match
+  Found 34 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[23/30] Analyzing URL: https://www.archerie.fr/fr/604-stabilisateur-arc
+  Extracted path '/fr/604-stabilisateur-arc' from URL 'https://www.archerie.fr/fr/604-stabilisateur-arc'
+  URL path: /fr/604-stabilisateur-arc
+  Found 26 rows with exact path match
+  Found 23 rows with exact path match
+  Found 5 rows with exact path match
+  Found 5 insights
+
+[24/30] Analyzing URL: https://www.archerie.fr/fr/649-stabilisation
+  Extracted path '/fr/649-stabilisation' from URL 'https://www.archerie.fr/fr/649-stabilisation'
+  URL path: /fr/649-stabilisation
+  Found 56 rows with exact path match
+  Found 45 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[25/30] Analyzing URL: https://www.archerie.fr/fr/688-transport-et-protection
+  Extracted path '/fr/688-transport-et-protection' from URL 'https://www.archerie.fr/fr/688-transport-et-protection'
+  URL path: /fr/688-transport-et-protection
+  Found 20 rows with exact path match
+  Found 24 rows with exact path match
+  Found 5 rows with exact path match
+  Found 7 insights
+
+[26/30] Analyzing URL: https://www.archerie.fr/fr/690-housses
+  Extracted path '/fr/690-housses' from URL 'https://www.archerie.fr/fr/690-housses'
+  URL path: /fr/690-housses
+  Found 29 rows with exact path match
+  Found 35 rows with exact path match
+  Found 9 rows with exact path match
+  Found 6 insights
+
+[27/30] Analyzing URL: https://www.archerie.fr/fr/689-sac-a-dos
+  Extracted path '/fr/689-sac-a-dos' from URL 'https://www.archerie.fr/fr/689-sac-a-dos'
+  URL path: /fr/689-sac-a-dos
+  Found 37 rows with exact path match
+  Found 37 rows with exact path match
+  Found 11 rows with exact path match
+  Found 7 insights
+
+[28/30] Analyzing URL: https://www.archerie.fr/fr/602-cibles-archerie
+  Extracted path '/fr/602-cibles-archerie' from URL 'https://www.archerie.fr/fr/602-cibles-archerie'
+  URL path: /fr/602-cibles-archerie
+  Found 62 rows with exact path match
+  Found 54 rows with exact path match
+  Found 15 rows with exact path match
+  Found 5 insights
+
+[29/30] Analyzing URL: https://www.archerie.fr/fr/720-cible-mousse
+  Extracted path '/fr/720-cible-mousse' from URL 'https://www.archerie.fr/fr/720-cible-mousse'
+  URL path: /fr/720-cible-mousse
+  Found 59 rows with exact path match
+  Found 57 rows with exact path match
+  Found 9 rows with exact path match
+  Found 7 insights
+
+[30/30] Analyzing URL: https://www.archerie.fr/fr/642-blasons
+  Extracted path '/fr/642-blasons' from URL 'https://www.archerie.fr/fr/642-blasons'
+  URL path: /fr/642-blasons
+  Found 37 rows with exact path match
+  Found 41 rows with exact path match
+  Found 7 rows with exact path match
+  Found 7 insights
+
+PageSpeed analysis is disabled (use --pagespeed to enable)
+
+English analysis saved to: results/Property_427363317_20250411_220417_url_analysis_en.json
+French analysis saved to: results/Property_427363317_20250411_220417_url_analysis_fr.json
+
+Generating Google Doc report for URL analysis...
+Error generating property overview: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=multipart returned "Google Drive API has not been used in project 754175171799 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=754175171799 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.". Details: "[{'message': 'Google Drive API has not been used in project 754175171799 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=754175171799 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'domain': 'usageLimits', 'reason': 'accessNotConfigured', 'extendedHelp': 'https://console.developers.google.com'}]">

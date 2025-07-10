@@ -1,0 +1,7 @@
+google-analytics-data==0.16.0
+google-analytics-admin==0.17.0
+google-auth==2.22.0
+google-auth-oauthlib==1.0.0
+pandas==2.0.3
+numpy==1.24.4
+requests==2.31.0
