@@ -1,0 +1,2870 @@
+{
+  "property_id": "427363317",
+  "property_name": "Property 427363317",
+  "timestamp": "2025-07-11T15:48:31.297924",
+  "urls_analyzed": 30,
+  "property_metrics": {},
+  "marketing_channels": {
+    "direct": {
+      "sessions": 9935,
+      "percentage": 18.36
+    },
+    "email": {
+      "sessions": 2079,
+      "percentage": 3.84
+    },
+    "organic": {
+      "sessions": 19303,
+      "percentage": 35.67
+    },
+    "other": {
+      "sessions": 780,
+      "percentage": 1.44
+    },
+    "paid-search": {
+      "sessions": 18246,
+      "percentage": 33.72
+    },
+    "referral": {
+      "sessions": 1646,
+      "percentage": 3.04
+    },
+    "social": {
+      "sessions": 2127,
+      "percentage": 3.93
+    }
+  },
+  "conversion_metrics": {
+    "add_to_cart": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "begin_checkout": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "purchase": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "remove_from_cart": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "select_item": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "view_cart": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "view_item": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    },
+    "view_item_list": {
+      "pagePath": 0,
+      "date": 0,
+      "keyEvents": 0,
+      "ecommercePurchases": 0,
+      "transactions": 0,
+      "addToCarts": 0,
+      "checkouts": 0
+    }
+  },
+  "urls": {
+    "https://www.archerie.fr/fr/78-arcs": {
+      "status": "success",
+      "metrics": {
+        "sessions": 1157,
+        "activeUsers": 1040,
+        "screenPageViews": 3346,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 3,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 3,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 336,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 1949,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 155,
+            "percentage": 13.45
+          },
+          "email": {
+            "sessions": 10,
+            "percentage": 0.87
+          },
+          "organic": {
+            "sessions": 145,
+            "percentage": 12.59
+          },
+          "other": {
+            "sessions": 22,
+            "percentage": 1.91
+          },
+          "paid-search": {
+            "sessions": 781,
+            "percentage": 67.8
+          },
+          "referral": {
+            "sessions": 7,
+            "percentage": 0.61
+          },
+          "social": {
+            "sessions": 32,
+            "percentage": 2.78
+          }
+        },
+        "pageviewsPerSession": 2.89
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 1157 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 3346 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 781 sessions (67.8% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 88.9% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 87.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 86.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/78-arcs montre 118 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 118,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/80-arcs-a-poulie": {
+      "status": "success",
+      "metrics": {
+        "sessions": 1053,
+        "activeUsers": 944,
+        "screenPageViews": 2116,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 2,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 2,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 415,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 1767,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 117,
+            "percentage": 11.1
+          },
+          "email": {
+            "sessions": 7,
+            "percentage": 0.66
+          },
+          "organic": {
+            "sessions": 640,
+            "percentage": 60.72
+          },
+          "other": {
+            "sessions": 10,
+            "percentage": 0.95
+          },
+          "paid-search": {
+            "sessions": 256,
+            "percentage": 24.29
+          },
+          "referral": {
+            "sessions": 7,
+            "percentage": 0.66
+          },
+          "social": {
+            "sessions": 17,
+            "percentage": 1.61
+          }
+        },
+        "pageviewsPerSession": 2.01
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 1053 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 2116 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 640 sessions (60.7% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 3738.7% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 3420.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 226.7% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/80-arcs-a-poulie montre 104 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 104,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/79-arcs-recurve": {
+      "status": "success",
+      "metrics": {
+        "sessions": 299,
+        "activeUsers": 279,
+        "screenPageViews": 624,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 159,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 501,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 50,
+            "percentage": 16.72
+          },
+          "email": {
+            "sessions": 7,
+            "percentage": 2.34
+          },
+          "organic": {
+            "sessions": 145,
+            "percentage": 48.49
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 0.67
+          },
+          "paid-search": {
+            "sessions": 91,
+            "percentage": 30.43
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 0.33
+          },
+          "social": {
+            "sessions": 3,
+            "percentage": 1.0
+          }
+        },
+        "pageviewsPerSession": 2.09
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 299 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 624 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 145 sessions (48.5% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 79.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 79.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 75.4% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/79-arcs-recurve montre 69 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 69,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/698-arcs-a-cheval": {
+      "status": "success",
+      "metrics": {
+        "sessions": 88,
+        "activeUsers": 83,
+        "screenPageViews": 185,
+        "events": {
+          "select_item": {
+            "keyEvents": 69,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 163,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 21,
+            "percentage": 23.86
+          },
+          "email": {
+            "sessions": 4,
+            "percentage": 4.55
+          },
+          "organic": {
+            "sessions": 24,
+            "percentage": 27.27
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 1.14
+          },
+          "paid-search": {
+            "sessions": 30,
+            "percentage": 34.09
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 1.14
+          },
+          "social": {
+            "sessions": 7,
+            "percentage": 7.95
+          }
+        },
+        "pageviewsPerSession": 2.1
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 88 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 185 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 30 sessions (34.1% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 55450.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 55450.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 74000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/698-arcs-a-cheval montre 52 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 52,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/699-arcs-long-anglais": {
+      "status": "success",
+      "metrics": {
+        "sessions": 122,
+        "activeUsers": 112,
+        "screenPageViews": 276,
+        "events": {
+          "select_item": {
+            "keyEvents": 105,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 239,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 28,
+            "percentage": 22.95
+          },
+          "email": {
+            "sessions": 2,
+            "percentage": 1.64
+          },
+          "organic": {
+            "sessions": 51,
+            "percentage": 41.8
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 1.64
+          },
+          "paid-search": {
+            "sessions": 33,
+            "percentage": 27.05
+          },
+          "referral": {
+            "sessions": 2,
+            "percentage": 1.64
+          },
+          "social": {
+            "sessions": 4,
+            "percentage": 3.28
+          }
+        },
+        "pageviewsPerSession": 2.26
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 122 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 276 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 51 sessions (41.8% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 5175.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 5175.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 5133.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/699-arcs-long-anglais montre 61 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 61,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/706-arcs-recurve-demontables": {
+      "status": "success",
+      "metrics": {
+        "sessions": 164,
+        "activeUsers": 146,
+        "screenPageViews": 448,
+        "events": {
+          "select_item": {
+            "keyEvents": 37,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 267,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 25,
+            "percentage": 15.24
+          },
+          "email": {
+            "sessions": 16,
+            "percentage": 9.76
+          },
+          "organic": {
+            "sessions": 43,
+            "percentage": 26.22
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 1.22
+          },
+          "paid-search": {
+            "sessions": 67,
+            "percentage": 40.85
+          },
+          "referral": {
+            "sessions": 5,
+            "percentage": 3.05
+          },
+          "social": {
+            "sessions": 6,
+            "percentage": 3.66
+          }
+        },
+        "pageviewsPerSession": 2.73
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 164 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 448 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 67 sessions (40.9% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 158.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 158.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 575.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/706-arcs-recurve-demontables montre 72 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 72,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/660-poignees-d-arcs": {
+      "status": "success",
+      "metrics": {
+        "sessions": 162,
+        "activeUsers": 150,
+        "screenPageViews": 377,
+        "events": {
+          "select_item": {
+            "keyEvents": 56,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 270,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 39,
+            "percentage": 24.07
+          },
+          "email": {
+            "sessions": 5,
+            "percentage": 3.09
+          },
+          "organic": {
+            "sessions": 50,
+            "percentage": 30.86
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 1.23
+          },
+          "paid-search": {
+            "sessions": 60,
+            "percentage": 37.04
+          },
+          "referral": {
+            "sessions": 6,
+            "percentage": 3.7
+          }
+        },
+        "pageviewsPerSession": 2.33
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 162 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 377 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 60 sessions (37.0% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 320.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 320.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 800.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/660-poignees-d-arcs montre 63 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 63,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/607-branches-d-arcs": {
+      "status": "success",
+      "metrics": {
+        "sessions": 152,
+        "activeUsers": 142,
+        "screenPageViews": 364,
+        "events": {
+          "select_item": {
+            "keyEvents": 55,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 246,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 38,
+            "percentage": 25
+          },
+          "email": {
+            "sessions": 15,
+            "percentage": 9.87
+          },
+          "organic": {
+            "sessions": 47,
+            "percentage": 30.92
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 0.66
+          },
+          "paid-search": {
+            "sessions": 44,
+            "percentage": 28.95
+          },
+          "referral": {
+            "sessions": 7,
+            "percentage": 4.61
+          }
+        },
+        "pageviewsPerSession": 2.39
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 152 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 364 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 47 sessions (30.9% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 61.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 61.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 384.6% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/607-branches-d-arcs montre 71 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 71,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/610-arcs-a-poulies-de-chasse": {
+      "status": "success",
+      "metrics": {
+        "sessions": 511,
+        "activeUsers": 456,
+        "screenPageViews": 943,
+        "events": {
+          "select_item": {
+            "keyEvents": 172,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 805,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 106,
+            "percentage": 20.83
+          },
+          "email": {
+            "sessions": 3,
+            "percentage": 0.59
+          },
+          "organic": {
+            "sessions": 211,
+            "percentage": 41.45
+          },
+          "other": {
+            "sessions": 10,
+            "percentage": 1.96
+          },
+          "paid-search": {
+            "sessions": 116,
+            "percentage": 22.79
+          },
+          "referral": {
+            "sessions": 4,
+            "percentage": 0.79
+          },
+          "social": {
+            "sessions": 59,
+            "percentage": 11.59
+          }
+        },
+        "pageviewsPerSession": 1.85
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 511 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 943 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 211 sessions (41.5% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 987.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 987.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 74.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/610-arcs-a-poulies-de-chasse montre 108 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 108,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/685-kits-d-arcs-a-poulies": {
+      "status": "success",
+      "metrics": {
+        "sessions": 153,
+        "activeUsers": 138,
+        "screenPageViews": 384,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 2,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 2,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 125,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 304,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 21,
+            "percentage": 13.73
+          },
+          "email": {
+            "sessions": 1,
+            "percentage": 0.65
+          },
+          "organic": {
+            "sessions": 48,
+            "percentage": 31.37
+          },
+          "other": {
+            "sessions": 4,
+            "percentage": 2.61
+          },
+          "paid-search": {
+            "sessions": 49,
+            "percentage": 32.03
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 0.65
+          },
+          "social": {
+            "sessions": 29,
+            "percentage": 18.95
+          }
+        },
+        "pageviewsPerSession": 2.51
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 153 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 384 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 49 sessions (32.0% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 18591.2% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 18591.2% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 2657.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/685-kits-d-arcs-a-poulies montre 78 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 78,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/81-fleches": {
+      "status": "success",
+      "metrics": {
+        "sessions": 397,
+        "activeUsers": 374,
+        "screenPageViews": 905,
+        "events": {
+          "select_item": {
+            "keyEvents": 164,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 695,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 44,
+            "percentage": 11.08
+          },
+          "email": {
+            "sessions": 9,
+            "percentage": 2.27
+          },
+          "organic": {
+            "sessions": 236,
+            "percentage": 59.45
+          },
+          "other": {
+            "sessions": 6,
+            "percentage": 1.51
+          },
+          "paid-search": {
+            "sessions": 94,
+            "percentage": 23.68
+          },
+          "referral": {
+            "sessions": 3,
+            "percentage": 0.76
+          },
+          "social": {
+            "sessions": 5,
+            "percentage": 1.26
+          }
+        },
+        "pageviewsPerSession": 2.28
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 397 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 905 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 236 sessions (59.4% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 10.9% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 12.9% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/81-fleches montre 83 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 83,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/621-tubes-darcherie": {
+      "status": "success",
+      "metrics": {
+        "sessions": 156,
+        "activeUsers": 148,
+        "screenPageViews": 305,
+        "events": {
+          "select_item": {
+            "keyEvents": 44,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 230,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 24,
+            "percentage": 15.38
+          },
+          "email": {
+            "sessions": 8,
+            "percentage": 5.13
+          },
+          "organic": {
+            "sessions": 59,
+            "percentage": 37.82
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 0.64
+          },
+          "paid-search": {
+            "sessions": 57,
+            "percentage": 36.54
+          },
+          "referral": {
+            "sessions": 2,
+            "percentage": 1.28
+          },
+          "social": {
+            "sessions": 5,
+            "percentage": 3.21
+          }
+        },
+        "pageviewsPerSession": 1.96
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 156 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 305 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 59 sessions (37.8% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 6450.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 6450.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 64000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/621-tubes-darcherie montre 64 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 64,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/1188-futs-en-bois": {
+      "status": "success",
+      "metrics": {
+        "sessions": 36,
+        "activeUsers": 34,
+        "screenPageViews": 48,
+        "events": {
+          "select_item": {
+            "keyEvents": 7,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 47,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 5,
+            "percentage": 13.89
+          },
+          "email": {
+            "sessions": 1,
+            "percentage": 2.78
+          },
+          "organic": {
+            "sessions": 12,
+            "percentage": 33.33
+          },
+          "paid-search": {
+            "sessions": 14,
+            "percentage": 38.89
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 2.78
+          },
+          "social": {
+            "sessions": 3,
+            "percentage": 8.33
+          }
+        },
+        "pageviewsPerSession": 1.33
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 36 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 48 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 14 sessions (38.9% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 66.7% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/1188-futs-en-bois montre 26 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 26,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/601-equipement-de-l-archer": {
+      "status": "success",
+      "metrics": {
+        "sessions": 69,
+        "activeUsers": 64,
+        "screenPageViews": 230,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 16,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 107,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 12,
+            "percentage": 17.39
+          },
+          "organic": {
+            "sessions": 30,
+            "percentage": 43.48
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 2.9
+          },
+          "paid-search": {
+            "sessions": 23,
+            "percentage": 33.33
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 1.45
+          },
+          "social": {
+            "sessions": 1,
+            "percentage": 1.45
+          }
+        },
+        "pageviewsPerSession": 3.33
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 69 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 230 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 30 sessions (43.5% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 99.1% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 99.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 99.1% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/601-equipement-de-l-archer montre 46 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 46,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/96-carquois": {
+      "status": "success",
+      "metrics": {
+        "sessions": 56,
+        "activeUsers": 54,
+        "screenPageViews": 93,
+        "events": {
+          "select_item": {
+            "keyEvents": 20,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 89,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 12,
+            "percentage": 21.43
+          },
+          "email": {
+            "sessions": 1,
+            "percentage": 1.79
+          },
+          "organic": {
+            "sessions": 20,
+            "percentage": 35.71
+          },
+          "paid-search": {
+            "sessions": 21,
+            "percentage": 37.5
+          },
+          "referral": {
+            "sessions": 2,
+            "percentage": 3.57
+          }
+        },
+        "pageviewsPerSession": 1.66
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 56 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 93 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 21 sessions (37.5% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 96.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 96.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 96.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/96-carquois montre 33 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 33,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/635-palettes": {
+      "status": "success",
+      "metrics": {
+        "sessions": 94,
+        "activeUsers": 86,
+        "screenPageViews": 218,
+        "events": {
+          "select_item": {
+            "keyEvents": 40,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 159,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 19,
+            "percentage": 20.21
+          },
+          "email": {
+            "sessions": 2,
+            "percentage": 2.13
+          },
+          "organic": {
+            "sessions": 34,
+            "percentage": 36.17
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 1.06
+          },
+          "paid-search": {
+            "sessions": 32,
+            "percentage": 34.04
+          },
+          "referral": {
+            "sessions": 4,
+            "percentage": 4.26
+          },
+          "social": {
+            "sessions": 2,
+            "percentage": 2.13
+          }
+        },
+        "pageviewsPerSession": 2.32
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 94 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 218 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 34 sessions (36.2% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 509.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 903.2% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 98.6% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/635-palettes montre 48 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 48,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/633-protege-bras": {
+      "status": "success",
+      "metrics": {
+        "sessions": 119,
+        "activeUsers": 110,
+        "screenPageViews": 216,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 54,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 186,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 17,
+            "percentage": 14.29
+          },
+          "email": {
+            "sessions": 1,
+            "percentage": 0.84
+          },
+          "organic": {
+            "sessions": 52,
+            "percentage": 43.7
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 0.84
+          },
+          "paid-search": {
+            "sessions": 39,
+            "percentage": 32.77
+          },
+          "referral": {
+            "sessions": 6,
+            "percentage": 5.04
+          },
+          "social": {
+            "sessions": 3,
+            "percentage": 2.52
+          }
+        },
+        "pageviewsPerSession": 1.82
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 119 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 216 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 52 sessions (43.7% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 60.8% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/633-protege-bras montre 56 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 56,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/636-decocheurs": {
+      "status": "success",
+      "metrics": {
+        "sessions": 83,
+        "activeUsers": 79,
+        "screenPageViews": 151,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 10,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 108,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 11,
+            "percentage": 13.25
+          },
+          "email": {
+            "sessions": 2,
+            "percentage": 2.41
+          },
+          "organic": {
+            "sessions": 22,
+            "percentage": 26.51
+          },
+          "other": {
+            "sessions": 3,
+            "percentage": 3.61
+          },
+          "paid-search": {
+            "sessions": 39,
+            "percentage": 46.99
+          },
+          "referral": {
+            "sessions": 3,
+            "percentage": 3.61
+          },
+          "social": {
+            "sessions": 3,
+            "percentage": 3.61
+          }
+        },
+        "pageviewsPerSession": 1.82
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 83 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 151 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 39 sessions (47.0% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 100.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 100.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 400.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/636-decocheurs montre 43 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 43,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/603-equipement-de-l-arc": {
+      "status": "success",
+      "metrics": {
+        "sessions": 51,
+        "activeUsers": 50,
+        "screenPageViews": 207,
+        "events": {
+          "select_item": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 79,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 11,
+            "percentage": 21.57
+          },
+          "email": {
+            "sessions": 2,
+            "percentage": 3.92
+          },
+          "organic": {
+            "sessions": 19,
+            "percentage": 37.25
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 1.96
+          },
+          "paid-search": {
+            "sessions": 17,
+            "percentage": 33.33
+          },
+          "social": {
+            "sessions": 1,
+            "percentage": 1.96
+          }
+        },
+        "pageviewsPerSession": 4.06
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 51 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 207 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 19 sessions (37.3% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 31000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 31000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 21100.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/603-equipement-de-l-arc montre 35 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 35,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/82-viseurs": {
+      "status": "success",
+      "metrics": {
+        "sessions": 62,
+        "activeUsers": 56,
+        "screenPageViews": 128,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 5,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 78,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 9,
+            "percentage": 14.52
+          },
+          "organic": {
+            "sessions": 25,
+            "percentage": 40.32
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 1.61
+          },
+          "paid-search": {
+            "sessions": 24,
+            "percentage": 38.71
+          },
+          "social": {
+            "sessions": 3,
+            "percentage": 4.84
+          }
+        },
+        "pageviewsPerSession": 2.06
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 62 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 128 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 25 sessions (40.3% du trafic)"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/82-viseurs montre 32 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 32,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/643-repose-fleches": {
+      "status": "success",
+      "metrics": {
+        "sessions": 105,
+        "activeUsers": 101,
+        "screenPageViews": 284,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 3,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 3,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 23,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 170,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 14,
+            "percentage": 13.33
+          },
+          "email": {
+            "sessions": 3,
+            "percentage": 2.86
+          },
+          "organic": {
+            "sessions": 41,
+            "percentage": 39.05
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 1.9
+          },
+          "paid-search": {
+            "sessions": 35,
+            "percentage": 33.33
+          },
+          "referral": {
+            "sessions": 5,
+            "percentage": 4.76
+          },
+          "social": {
+            "sessions": 5,
+            "percentage": 4.76
+          }
+        },
+        "pageviewsPerSession": 2.7
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 105 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 284 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 41 sessions (39.0% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 1600.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 933.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 1175.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/643-repose-fleches montre 51 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 51,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/644-berger-button": {
+      "status": "success",
+      "metrics": {
+        "sessions": 44,
+        "activeUsers": 42,
+        "screenPageViews": 84,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 15,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 74,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 7,
+            "percentage": 15.91
+          },
+          "organic": {
+            "sessions": 19,
+            "percentage": 43.18
+          },
+          "paid-search": {
+            "sessions": 15,
+            "percentage": 34.09
+          },
+          "referral": {
+            "sessions": 2,
+            "percentage": 4.55
+          },
+          "social": {
+            "sessions": 1,
+            "percentage": 2.27
+          }
+        },
+        "pageviewsPerSession": 1.91
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 44 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 84 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 19 sessions (43.2% du trafic)"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/644-berger-button montre 29 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 29,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/604-stabilisateur-arc": {
+      "status": "success",
+      "metrics": {
+        "sessions": 26,
+        "activeUsers": 25,
+        "screenPageViews": 35,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 30,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 4,
+            "percentage": 15.38
+          },
+          "organic": {
+            "sessions": 16,
+            "percentage": 61.54
+          },
+          "paid-search": {
+            "sessions": 5,
+            "percentage": 19.23
+          },
+          "social": {
+            "sessions": 1,
+            "percentage": 3.85
+          }
+        },
+        "pageviewsPerSession": 1.35
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 26 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 35 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 16 sessions (61.5% du trafic)"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/604-stabilisateur-arc montre 18 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 18,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/649-stabilisation": {
+      "status": "success",
+      "metrics": {
+        "sessions": 96,
+        "activeUsers": 88,
+        "screenPageViews": 265,
+        "events": {
+          "select_item": {
+            "keyEvents": 15,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 160,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 9,
+            "percentage": 9.38
+          },
+          "email": {
+            "sessions": 1,
+            "percentage": 1.04
+          },
+          "organic": {
+            "sessions": 33,
+            "percentage": 34.38
+          },
+          "other": {
+            "sessions": 5,
+            "percentage": 5.21
+          },
+          "paid-search": {
+            "sessions": 39,
+            "percentage": 40.62
+          },
+          "referral": {
+            "sessions": 7,
+            "percentage": 7.29
+          },
+          "social": {
+            "sessions": 2,
+            "percentage": 2.08
+          }
+        },
+        "pageviewsPerSession": 2.76
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 96 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 265 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 39 sessions (40.6% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 15.4% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 15.4% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 96.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/649-stabilisation montre 50 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 50,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/688-transport-et-protection": {
+      "status": "success",
+      "metrics": {
+        "sessions": 17,
+        "activeUsers": 17,
+        "screenPageViews": 96,
+        "events": {
+          "select_item": {
+            "keyEvents": 23,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 47,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 4,
+            "percentage": 23.53
+          },
+          "email": {
+            "sessions": 1,
+            "percentage": 5.88
+          },
+          "organic": {
+            "sessions": 7,
+            "percentage": 41.18
+          },
+          "paid-search": {
+            "sessions": 5,
+            "percentage": 29.41
+          }
+        },
+        "pageviewsPerSession": 5.65
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 17 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 96 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 7 sessions (41.2% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 1000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 1000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 81000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/688-transport-et-protection montre 16 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 16,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/690-housses": {
+      "status": "success",
+      "metrics": {
+        "sessions": 44,
+        "activeUsers": 44,
+        "screenPageViews": 103,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 4,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 4,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 16,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 77,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 9,
+            "percentage": 20.45
+          },
+          "email": {
+            "sessions": 3,
+            "percentage": 6.82
+          },
+          "organic": {
+            "sessions": 16,
+            "percentage": 36.36
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 2.27
+          },
+          "paid-search": {
+            "sessions": 13,
+            "percentage": 29.55
+          },
+          "referral": {
+            "sessions": 2,
+            "percentage": 4.55
+          }
+        },
+        "pageviewsPerSession": 2.34
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 44 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 103 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 16 sessions (36.4% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 1000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 1000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 4000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/690-housses montre 34 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 34,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/689-sac-a-dos": {
+      "status": "success",
+      "metrics": {
+        "sessions": 54,
+        "activeUsers": 52,
+        "screenPageViews": 115,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 1,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 1,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 49,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 110,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 5,
+            "percentage": 9.26
+          },
+          "email": {
+            "sessions": 4,
+            "percentage": 7.41
+          },
+          "organic": {
+            "sessions": 21,
+            "percentage": 38.89
+          },
+          "paid-search": {
+            "sessions": 21,
+            "percentage": 38.89
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 1.85
+          },
+          "social": {
+            "sessions": 2,
+            "percentage": 3.7
+          }
+        },
+        "pageviewsPerSession": 2.13
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 54 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 115 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 21 sessions (38.9% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 32.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 32.3% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 12.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/689-sac-a-dos montre 35 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 35,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/602-cibles-archerie": {
+      "status": "success",
+      "metrics": {
+        "sessions": 151,
+        "activeUsers": 138,
+        "screenPageViews": 376,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 6,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 6,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 64,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 265,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 13,
+            "percentage": 8.61
+          },
+          "email": {
+            "sessions": 13,
+            "percentage": 8.61
+          },
+          "organic": {
+            "sessions": 64,
+            "percentage": 42.38
+          },
+          "other": {
+            "sessions": 2,
+            "percentage": 1.32
+          },
+          "paid-search": {
+            "sessions": 56,
+            "percentage": 37.09
+          },
+          "referral": {
+            "sessions": 1,
+            "percentage": 0.66
+          },
+          "social": {
+            "sessions": 2,
+            "percentage": 1.32
+          }
+        },
+        "pageviewsPerSession": 2.49
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 151 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 376 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'organique' apportant 64 sessions (42.4% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a diminu\u00e9 de 61.5% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a diminu\u00e9 de 69.2% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a diminu\u00e9 de 95.9% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/602-cibles-archerie montre 54 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 54,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/720-cible-mousse": {
+      "status": "success",
+      "metrics": {
+        "sessions": 169,
+        "activeUsers": 157,
+        "screenPageViews": 312,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 6,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 6,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 70,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 284,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 17,
+            "percentage": 10.06
+          },
+          "email": {
+            "sessions": 6,
+            "percentage": 3.55
+          },
+          "organic": {
+            "sessions": 63,
+            "percentage": 37.28
+          },
+          "other": {
+            "sessions": 4,
+            "percentage": 2.37
+          },
+          "paid-search": {
+            "sessions": 69,
+            "percentage": 40.83
+          },
+          "referral": {
+            "sessions": 2,
+            "percentage": 1.18
+          },
+          "social": {
+            "sessions": 8,
+            "percentage": 4.73
+          }
+        },
+        "pageviewsPerSession": 1.85
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 169 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 312 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 69 sessions (40.8% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 17675.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 17675.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 17416.7% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/720-cible-mousse montre 69 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 69,
+      "compared_to_property": {}
+    },
+    "https://www.archerie.fr/fr/642-blasons": {
+      "status": "success",
+      "metrics": {
+        "sessions": 84,
+        "activeUsers": 78,
+        "screenPageViews": 194,
+        "events": {
+          "add_to_cart": {
+            "keyEvents": 31,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 31,
+            "checkouts": 0
+          },
+          "select_item": {
+            "keyEvents": 38,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          },
+          "view_item_list": {
+            "keyEvents": 135,
+            "ecommercePurchases": 0,
+            "transactions": 0,
+            "addToCarts": 0,
+            "checkouts": 0
+          }
+        },
+        "channels": {
+          "direct": {
+            "sessions": 14,
+            "percentage": 16.67
+          },
+          "email": {
+            "sessions": 4,
+            "percentage": 4.76
+          },
+          "organic": {
+            "sessions": 25,
+            "percentage": 29.76
+          },
+          "other": {
+            "sessions": 1,
+            "percentage": 1.19
+          },
+          "paid-search": {
+            "sessions": 34,
+            "percentage": 40.48
+          },
+          "referral": {
+            "sessions": 3,
+            "percentage": 3.57
+          },
+          "social": {
+            "sessions": 3,
+            "percentage": 3.57
+          }
+        },
+        "pageviewsPerSession": 2.31
+      },
+      "insights": [
+        {
+          "type": "metric",
+          "metric": "sessions",
+          "finding": "Cette URL a re\u00e7u 84 sessions dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "metric",
+          "metric": "screenPageViews",
+          "finding": "Cette URL a re\u00e7u 194 vues de page dans la p\u00e9riode analys\u00e9e"
+        },
+        {
+          "type": "channel",
+          "metric": "topChannel",
+          "finding": "Le principal canal marketing pour cette URL est 'recherche payante' apportant 34 sessions (40.5% du trafic)"
+        },
+        {
+          "type": "trend",
+          "metric": "sessions",
+          "finding": "sessions a augment\u00e9 de 211000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "activeUsers",
+          "finding": "utilisateurs actifs a augment\u00e9 de 211000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "trend",
+          "metric": "screenPageViews",
+          "finding": "vues de page a augment\u00e9 de 512000.0% pour cette URL sur la p\u00e9riode"
+        },
+        {
+          "type": "summary",
+          "finding": "Analyse pour l'URL https://www.archerie.fr/fr/642-blasons montre 48 points de donn\u00e9es sur la p\u00e9riode sp\u00e9cifi\u00e9e"
+        }
+      ],
+      "data_points": 48,
+      "compared_to_property": {}
+    }
+  },
+  "language": "fr"
+}

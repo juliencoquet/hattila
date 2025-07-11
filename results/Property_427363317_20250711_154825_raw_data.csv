@@ -1,0 +1,545 @@
+date,sessionSource,sessions_last_30_days,activeUsers_last_30_days,screenPageViews_last_30_days
+2025-06-15,google,604,477,3113
+2025-07-06,google,500,381,3297
+2025-06-14,google,477,368,2306
+2025-06-11,google,472,359,2429
+2025-07-07,google,461,325,2807
+2025-06-16,google,452,332,2023
+2025-06-12,google,436,323,2003
+2025-06-22,google,435,335,2586
+2025-06-18,google,433,302,2501
+2025-06-17,google,432,310,2585
+2025-06-23,google,429,320,2244
+2025-07-03,google,427,321,2475
+2025-06-24,google,423,305,2293
+2025-07-05,google,423,316,4038
+2025-06-29,google,416,314,2175
+2025-06-19,google,414,281,2335
+2025-06-28,google,405,292,2323
+2025-07-01,google,404,289,2074
+2025-06-21,google,403,297,2152
+2025-07-09,google,403,300,1935
+2025-06-30,google,397,283,2686
+2025-07-08,google,395,293,1999
+2025-06-13,google,390,302,1916
+2025-06-25,google,383,281,2074
+2025-07-02,google,371,275,2675
+2025-07-04,google,363,255,3468
+2025-06-27,google,352,266,1907
+2025-06-26,google,351,262,2154
+2025-07-10,google,343,255,1703
+2025-06-20,google,321,233,1499
+2025-06-11,(direct),112,85,523
+2025-07-07,(direct),110,97,2440
+2025-06-12,(direct),103,62,574
+2025-07-06,(direct),93,79,668
+2025-06-16,(direct),91,61,871
+2025-06-17,(direct),91,61,840
+2025-07-03,probance,89,58,614
+2025-06-15,(direct),88,70,569
+2025-07-09,(direct),87,60,670
+2025-07-09,probance,86,72,557
+2025-06-13,(direct),83,60,544
+2025-06-18,(direct),83,53,389
+2025-06-19,(direct),83,64,439
+2025-06-30,(direct),79,65,479
+2025-06-25,(direct),76,60,579
+2025-07-02,probance,76,56,352
+2025-07-03,(direct),74,60,513
+2025-07-08,(direct),73,63,734
+2025-06-21,(direct),71,51,360
+2025-06-22,(direct),70,54,592
+2025-06-20,(direct),67,54,277
+2025-06-23,(direct),67,52,373
+2025-07-02,(direct),67,57,581
+2025-07-01,(direct),65,51,510
+2025-07-04,(direct),64,43,585
+2025-07-10,(direct),64,55,337
+2025-06-26,(direct),62,50,251
+2025-06-28,(direct),62,49,558
+2025-06-14,(direct),60,46,343
+2025-06-24,(direct),54,40,337
+2025-06-29,(direct),53,47,380
+2025-07-05,(direct),50,39,527
+2025-06-27,(direct),48,38,373
+2025-07-07,probance,41,30,226
+2025-06-13,probance,39,26,227
+2025-06-20,probance,38,28,199
+2025-06-24,fb,35,21,123
+2025-06-21,probance,29,23,134
+2025-06-18,fb,26,17,79
+2025-07-05,fb,26,17,70
+2025-07-02,fb,25,16,72
+2025-06-12,youtube.com,23,16,143
+2025-06-15,fb,23,14,54
+2025-06-22,fb,23,16,94
+2025-06-30,fb,23,13,109
+2025-07-06,fb,23,13,82
+2025-06-23,fb,22,17,65
+2025-07-10,probance,22,14,95
+2025-06-12,secure.payplug.com,21,9,104
+2025-06-21,youtube.com,21,15,157
+2025-06-27,fb,21,9,76
+2025-06-29,fb,21,14,67
+2025-07-01,fb,21,12,84
+2025-07-04,probance,21,11,104
+2025-07-08,fb,21,12,88
+2025-06-11,secure.payplug.com,20,6,94
+2025-06-12,fb,20,10,93
+2025-07-07,fb,20,14,39
+2025-06-11,probance,19,10,132
+2025-06-13,fb,19,11,154
+2025-06-16,youtube.com,19,15,80
+2025-06-19,youtube.com,19,10,147
+2025-06-20,youtube.com,19,9,74
+2025-06-23,youtube.com,19,13,122
+2025-07-03,fb,19,11,41
+2025-06-11,youtube.com,18,16,78
+2025-06-14,probance,18,11,153
+2025-06-17,fb,18,11,61
+2025-06-18,youtube.com,18,14,143
+2025-06-23,probance,18,13,109
+2025-07-06,youtube.com,18,12,292
+2025-06-14,fb,17,7,37
+2025-06-16,fb,17,13,58
+2025-06-18,secure.payplug.com,17,7,41
+2025-06-25,fb,17,8,42
+2025-06-26,fb,17,9,28
+2025-07-01,probance,17,9,298
+2025-06-11,fb,16,12,58
+2025-06-19,fb,16,6,21
+2025-06-24,probance,16,8,138
+2025-07-05,probance,16,11,123
+2025-06-17,youtube.com,15,9,57
+2025-06-26,probance,15,11,95
+2025-06-27,probance,15,11,88
+2025-06-30,probance,15,7,42
+2025-06-11,bing,14,9,58
+2025-06-12,bing,14,7,50
+2025-06-13,bing,14,8,54
+2025-06-14,youtube.com,14,10,83
+2025-06-15,youtube.com,14,13,127
+2025-07-04,fb,14,10,58
+2025-07-10,youtube.com,14,9,105
+2025-06-16,probance,13,11,88
+2025-06-24,youtube.com,13,11,122
+2025-06-25,youtube.com,13,10,211
+2025-07-08,bing,13,9,88
+2025-07-08,probance,13,9,171
+2025-06-13,youtube.com,12,11,76
+2025-06-17,bing,12,7,69
+2025-06-25,probance,12,9,52
+2025-06-27,youtube.com,12,8,156
+2025-07-02,bing,12,6,39
+2025-07-02,youtube.com,12,9,141
+2025-07-04,secure.payplug.com,12,5,56
+2025-06-17,secure.payplug.com,11,6,76
+2025-06-21,fb,11,4,37
+2025-06-22,youtube.com,11,8,33
+2025-06-25,bing,11,6,219
+2025-06-28,secure.payplug.com,11,8,21
+2025-06-30,youtube.com,11,8,26
+2025-07-01,secure.payplug.com,11,7,38
+2025-07-02,secure.payplug.com,11,8,38
+2025-07-05,youtube.com,11,10,93
+2025-07-07,bing,11,10,120
+2025-06-15,bing,10,6,39
+2025-06-17,probance,10,6,57
+2025-06-18,probance,10,7,65
+2025-06-28,fb,10,6,21
+2025-06-29,youtube.com,10,8,89
+2025-06-30,fr.search.yahoo.com,10,7,47
+2025-07-01,youtube.com,10,6,62
+2025-07-06,secure.payplug.com,10,4,40
+2025-07-10,secure.payplug.com,10,3,23
+2025-06-13,secure.payplug.com,9,5,22
+2025-06-14,bing,9,5,62
+2025-06-15,(not set),9,4,15
+2025-06-15,probance,9,7,83
+2025-06-16,bing,9,6,41
+2025-06-18,bing,9,7,47
+2025-06-20,secure.payplug.com,9,6,48
+2025-06-25,m.facebook.com,9,7,23
+2025-06-26,youtube.com,9,8,60
+2025-06-29,bing,9,6,64
+2025-07-01,(not set),9,5,55
+2025-07-09,(not set),9,7,18
+2025-07-09,fb,9,4,12
+2025-07-09,youtube.com,9,4,102
+2025-07-10,fb,9,4,35
+2025-06-12,probance,8,5,21
+2025-06-18,mail02.orange.fr,8,2,128
+2025-06-21,(not set),8,3,19
+2025-06-23,bing,8,7,147
+2025-06-28,youtube.com,8,5,17
+2025-07-03,secure.payplug.com,8,6,67
+2025-07-04,m.facebook.com,8,7,53
+2025-07-07,(not set),8,4,3
+2025-07-08,youtube.com,8,7,19
+2025-07-09,secure.payplug.com,8,4,20
+2025-06-13,(data not available),7,7,74
+2025-06-26,secure.payplug.com,7,5,12
+2025-06-29,probance,7,5,35
+2025-07-01,bing,7,6,24
+2025-07-03,bing,7,6,14
+2025-07-03,youtube.com,7,6,15
+2025-07-06,bing,7,5,26
+2025-07-06,probance,7,6,18
+2025-07-07,duckduckgo,7,4,19
+2025-07-07,youtube.com,7,6,31
+2025-07-08,(data not available),7,7,46
+2025-07-08,secure.payplug.com,7,4,32
+2025-07-09,bing,7,6,211
+2025-07-10,m.facebook.com,7,3,67
+2025-06-12,(data not available),6,6,10
+2025-06-15,secure.payplug.com,6,3,19
+2025-06-16,(not set),6,6,11
+2025-06-16,secure.payplug.com,6,4,31
+2025-06-19,(data not available),6,6,165
+2025-06-19,bing,6,3,27
+2025-06-19,probance,6,4,25
+2025-06-20,bing,6,4,43
+2025-06-20,fb,6,2,13
+2025-06-21,(data not available),6,6,29
+2025-06-21,secure.payplug.com,6,3,7
+2025-06-22,(data not available),6,6,101
+2025-06-24,secure.payplug.com,6,5,49
+2025-06-27,secure.payplug.com,6,3,12
+2025-06-28,bing,6,3,76
+2025-06-30,bing,6,5,8
+2025-07-02,(not set),6,6,4
+2025-07-03,qwant.com,6,2,16
+2025-07-04,bing,6,3,17
+2025-07-05,bing,6,5,63
+2025-07-06,ecosia.org,6,6,8
+2025-06-11,(data not available),5,5,15
+2025-06-14,(data not available),5,5,9
+2025-06-15,qwant.com,5,4,35
+2025-06-16,(data not available),5,5,28
+2025-06-19,secure.payplug.com,5,3,23
+2025-06-20,checkout.getalma.eu,5,2,13
+2025-06-20,hattila.com,5,4,4
+2025-06-22,bing,5,4,7
+2025-06-22,checkout.getalma.eu,5,1,22
+2025-06-22,probance,5,5,72
+2025-06-23,(data not available),5,5,18
+2025-06-23,secure.payplug.com,5,3,49
+2025-06-24,bing,5,4,24
+2025-06-29,secure.payplug.com,5,4,18
+2025-07-01,m.facebook.com,5,3,9
+2025-07-03,(not set),5,4,88
+2025-06-13,(not set),4,4,19
+2025-06-14,hattila.com,4,4,7
+2025-06-15,(data not available),4,3,5
+2025-06-16,qwant.com,4,4,7
+2025-06-18,qwant.com,4,4,8
+2025-06-19,mail02.orange.fr,4,2,59
+2025-06-19,qwant.com,4,4,4
+2025-06-23,(not set),4,3,102
+2025-06-23,qwant.com,4,4,12
+2025-06-25,secure.payplug.com,4,2,20
+2025-06-26,(data not available),4,3,9
+2025-06-26,bing,4,3,8
+2025-06-28,(not set),4,4,10
+2025-06-28,m.facebook.com,4,3,33
+2025-06-29,ecosia.org,4,4,19
+2025-06-30,secure.payplug.com,4,3,11
+2025-07-02,checkout.getalma.eu,4,3,20
+2025-07-03,(data not available),4,4,31
+2025-07-03,fr.search.yahoo.com,4,3,12
+2025-07-04,youtube.com,4,4,38
+2025-07-05,secure.payplug.com,4,2,45
+2025-07-06,(data not available),4,4,25
+2025-07-06,chatgpt.com,4,3,7
+2025-07-06,hattila.com,4,3,3
+2025-07-07,secure.payplug.com,4,3,38
+2025-07-08,(not set),4,4,0
+2025-07-09,(data not available),4,4,40
+2025-07-10,(not set),4,4,31
+2025-07-10,checkout.getalma.eu,4,2,80
+2025-06-11,duckduckgo,3,2,3
+2025-06-11,ecosia.org,3,3,19
+2025-06-11,fr.search.yahoo.com,3,1,13
+2025-06-13,redirect.ppro.com,3,1,3
+2025-06-14,search.lilo.org,3,1,21
+2025-06-14,secure.payplug.com,3,3,5
+2025-06-16,hattila.com,3,3,5
+2025-06-17,mail02.orange.fr,3,1,62
+2025-06-19,checkout.getalma.eu,3,2,13
+2025-06-20,chatgpt.com,3,2,13
+2025-06-20,mail02.orange.fr,3,2,27
+2025-06-21,bing,3,2,19
+2025-06-21,hattila.com,3,2,3
+2025-06-22,fr.search.yahoo.com,3,3,71
+2025-06-22,secure.payplug.com,3,2,7
+2025-06-23,ecosia.org,3,3,3
+2025-06-24,ig,3,2,8
+2025-06-25,ecosia.org,3,3,6
+2025-06-27,hattila.com,3,3,3
+2025-06-27,ig,3,2,6
+2025-06-27,mail01.orange.fr,3,2,5
+2025-06-29,(data not available),3,3,30
+2025-06-30,(not set),3,3,3
+2025-07-01,hattila.com,3,3,3
+2025-07-02,(data not available),3,3,19
+2025-07-02,hattila.com,3,3,9
+2025-07-02,l.facebook.com,3,3,32
+2025-07-04,ig,3,3,10
+2025-07-05,(data not available),3,3,17
+2025-07-07,m.facebook.com,3,3,4
+2025-07-07,qwant.com,3,2,24
+2025-07-08,checkout.getalma.eu,3,2,61
+2025-07-08,hattila.com,3,3,3
+2025-07-09,checkout.getalma.eu,3,2,36
+2025-07-09,fr.search.yahoo.com,3,2,34
+2025-07-09,m.facebook.com,3,3,61
+2025-07-10,bing,3,3,67
+2025-07-10,qwant.com,3,3,7
+2025-06-11,m.facebook.com,2,2,3
+2025-06-11,qwant.com,2,1,34
+2025-06-12,ig,2,2,2
+2025-06-13,duckduckgo,2,2,3
+2025-06-13,hattila.com,2,2,2
+2025-06-14,(not set),2,2,110
+2025-06-14,checkout.getalma.eu,2,2,4
+2025-06-14,fr.search.yahoo.com,2,2,3
+2025-06-15,chatgpt.com,2,2,12
+2025-06-15,m.facebook.com,2,1,3
+2025-06-16,chatgpt.com,2,0,2
+2025-06-16,m.facebook.com,2,2,48
+2025-06-16,search.brave.com,2,1,4
+2025-06-17,(data not available),2,2,19
+2025-06-17,(not set),2,2,0
+2025-06-17,l.facebook.com,2,2,25
+2025-06-18,fr.search.yahoo.com,2,2,2
+2025-06-18,hattila.com,2,2,2
+2025-06-18,m.facebook.com,2,2,4
+2025-06-19,(not set),2,2,117
+2025-06-19,chatgpt.com,2,1,6
+2025-06-19,ecosia.org,2,2,6
+2025-06-19,mail01.orange.fr,2,2,2
+2025-06-20,(data not available),2,2,14
+2025-06-20,duckduckgo,2,1,186
+2025-06-20,ecosia.org,2,2,2
+2025-06-20,m.facebook.com,2,0,2
+2025-06-21,checkout.getalma.eu,2,1,8
+2025-06-21,fr.search.yahoo.com,2,2,11
+2025-06-21,ig,2,2,5
+2025-06-21,mail02.orange.fr,2,1,1
+2025-06-21,qwant.com,2,2,2
+2025-06-22,ig,2,1,5
+2025-06-23,fr.search.yahoo.com,2,1,2
+2025-06-24,(data not available),2,2,3
+2025-06-24,checkout.getalma.eu,2,2,1
+2025-06-24,m.facebook.com,2,2,7
+2025-06-25,fr.search.yahoo.com,2,2,5
+2025-06-25,l.instagram.com,2,2,3
+2025-06-25,qwant.com,2,2,8
+2025-06-26,fr.search.yahoo.com,2,1,6
+2025-06-26,ig,2,1,3
+2025-06-27,(data not available),2,2,21
+2025-06-27,bing,2,2,8
+2025-06-28,(data not available),2,2,7
+2025-06-28,ig,2,2,8
+2025-06-28,qwant.com,2,2,3
+2025-06-29,chatgpt.com,2,1,375
+2025-06-29,fr.search.yahoo.com,2,1,2
+2025-06-30,(data not available),2,2,3
+2025-06-30,ecosia.org,2,2,28
+2025-06-30,ig,2,2,2
+2025-06-30,m.facebook.com,2,2,39
+2025-07-01,(data not available),2,2,30
+2025-07-01,fr.search.yahoo.com,2,2,80
+2025-07-01,ig,2,2,8
+2025-07-02,fr.search.yahoo.com,2,2,4
+2025-07-02,ig,2,2,6
+2025-07-02,qwant.com,2,2,4
+2025-07-03,chatgpt.com,2,2,14
+2025-07-03,ecosia.org,2,2,2
+2025-07-03,m.facebook.com,2,2,7
+2025-07-03,search.brave.com,2,1,7
+2025-07-04,(not set),2,2,5
+2025-07-04,hattila.com,2,2,2
+2025-07-05,chatgpt.com,2,2,4
+2025-07-05,ecosia.org,2,2,12
+2025-07-05,hattila.com,2,2,2
+2025-07-05,ig,2,2,10
+2025-07-05,uk.search.yahoo.com,2,1,6
+2025-07-06,duckduckgo,2,2,7
+2025-07-06,mail02.orange.fr,2,1,37
+2025-07-06,qwant.com,2,1,2
+2025-07-07,hattila.com,2,1,43
+2025-07-08,l.facebook.com,2,1,3
+2025-07-08,qwant.com,2,2,35
+2025-07-08,search.brave.com,2,1,20
+2025-07-09,chatgpt.com,2,2,2
+2025-07-09,hattila.com,2,1,2
+2025-07-09,l.facebook.com,2,2,11
+2025-07-10,duckduckgo,2,1,2
+2025-07-10,hattila.com,2,2,2
+2025-07-10,search.brave.com,2,2,2
+2025-06-11,(not set),1,1,0
+2025-06-11,checkout.getalma.eu,1,1,6
+2025-06-11,l.facebook.com,1,0,1
+2025-06-11,search.lilo.org,1,1,1
+2025-06-12,(not set),1,1,1
+2025-06-12,ecosia.org,1,1,1
+2025-06-12,fr.search.yahoo.com,1,0,1
+2025-06-12,hattila.com,1,1,3
+2025-06-12,lm.facebook.com,1,1,15
+2025-06-12,m.facebook.com,1,1,3
+2025-06-12,qwant.com,1,1,2
+2025-06-12,search.lilo.org,1,1,1
+2025-06-12,web-explore.com,1,1,1
+2025-06-13,ecosia.org,1,1,6
+2025-06-13,fr.search.yahoo.com,1,1,1
+2025-06-13,qwant.com,1,1,2
+2025-06-13,search.brave.com,1,1,5
+2025-06-14,chatgpt.com,1,1,1
+2025-06-14,ecosia.org,1,1,1
+2025-06-14,lm.facebook.com,1,1,1
+2025-06-14,m.facebook.com,1,1,1
+2025-06-14,m.youtube.com,1,1,21
+2025-06-14,redirect.ppro.com,1,1,10
+2025-06-14,search.brave.com,1,1,3
+2025-06-14,yahoo,1,1,1
+2025-06-15,duckduckgo,1,1,1
+2025-06-15,ecosia.org,1,1,1
+2025-06-15,hattila.com,1,1,2
+2025-06-15,ig,1,1,1
+2025-06-15,l.facebook.com,1,0,1
+2025-06-15,search.brave.com,1,1,1
+2025-06-16,checkout.getalma.eu,1,1,1
+2025-06-16,fr.search.yahoo.com,1,1,1
+2025-06-16,ig,1,1,2
+2025-06-16,startpage.com,1,1,1
+2025-06-17,chatgpt.com,1,1,1
+2025-06-17,checkout.getalma.eu,1,1,1
+2025-06-17,duckduckgo,1,1,1
+2025-06-17,ig,1,0,1
+2025-06-17,m.facebook.com,1,1,1
+2025-06-17,search.lilo.org,1,1,1
+2025-06-18,(data not available),1,1,3
+2025-06-18,checkout.getalma.eu,1,1,8
+2025-06-18,ig,1,1,12
+2025-06-18,m.youtube.com,1,1,3
+2025-06-19,duckduckgo,1,1,1
+2025-06-19,hattila.com,1,1,3
+2025-06-19,ig,1,1,1
+2025-06-19,instagram.com,1,1,6
+2025-06-19,search.lilo.org,1,1,1
+2025-06-19,societe-des-avis-garantis.fr,1,1,21
+2025-06-19,zimbra.free.fr,1,1,18
+2025-06-20,ig,1,1,1
+2025-06-20,lm.facebook.com,1,0,1
+2025-06-20,mail.google.com,1,1,17
+2025-06-20,qwant.com,1,1,4
+2025-06-20,search.brave.com,1,1,4
+2025-06-21,chatgpt.com,1,1,1
+2025-06-21,search.brave.com,1,1,1
+2025-06-22,(not set),1,1,13
+2025-06-22,duckduckgo,1,1,6
+2025-06-22,l.facebook.com,1,1,11
+2025-06-22,m.facebook.com,1,1,1
+2025-06-22,m.youtube.com,1,1,2
+2025-06-23,hattila.com,1,1,1
+2025-06-23,l.facebook.com,1,1,4
+2025-06-23,m.facebook.com,1,1,3
+2025-06-23,mail01.orange.fr,1,1,1
+2025-06-23,search.lilo.org,1,1,1
+2025-06-24,copilot.microsoft.com,1,1,4
+2025-06-24,search.brave.com,1,1,49
+2025-06-25,(data not available),1,1,3
+2025-06-25,(not set),1,1,3
+2025-06-25,chatgpt.com,1,1,70
+2025-06-25,checkout.getalma.eu,1,1,5
+2025-06-25,hattila.com,1,1,2
+2025-06-25,l.facebook.com,1,1,8
+2025-06-25,mail02.orange.fr,1,1,11
+2025-06-26,chatgpt.com,1,1,1
+2025-06-26,hattila.com,1,1,1
+2025-06-26,l.facebook.com,1,1,4
+2025-06-26,m.facebook.com,1,1,3
+2025-06-26,m.youtube.com,1,1,7
+2025-06-27,duckduckgo,1,1,1
+2025-06-27,ecosia.org,1,1,1
+2025-06-27,fr.search.yahoo.com,1,1,2
+2025-06-27,m.facebook.com,1,1,3
+2025-06-27,mail02.orange.fr,1,1,12
+2025-06-27,ntp.msn.com,1,1,3
+2025-06-28,chatgpt.com,1,1,1
+2025-06-28,duckduckgo,1,1,1
+2025-06-28,fr.search.yahoo.com,1,1,1
+2025-06-28,l.facebook.com,1,1,19
+2025-06-28,mail02.orange.fr,1,1,19
+2025-06-28,probance,1,0,1
+2025-06-28,search.brave.com,1,1,2
+2025-06-29,(not set),1,1,0
+2025-06-29,duckduckgo,1,1,12
+2025-06-29,hattila.com,1,1,1
+2025-06-29,ig,1,1,3
+2025-06-29,l.facebook.com,1,1,2
+2025-06-29,l.instagram.com,1,1,1
+2025-06-29,m.facebook.com,1,1,2
+2025-06-29,mail02.orange.fr,1,1,6
+2025-06-29,qwant.com,1,1,6
+2025-06-30,chatgpt.com,1,1,12
+2025-06-30,checkout.getalma.eu,1,1,5
+2025-06-30,hattila.com,1,1,1
+2025-06-30,m.youtube.com,1,1,14
+2025-06-30,search.brave.com,1,1,1
+2025-06-30,search.lilo.org,1,1,1
+2025-07-01,chatgpt.com,1,1,37
+2025-07-01,checkout.getalma.eu,1,1,1
+2025-07-01,l.facebook.com,1,1,1
+2025-07-01,qwant.com,1,1,2
+2025-07-01,sm1w.mj.am,1,1,14
+2025-07-01,societe-des-avis-garantis.fr,1,1,3
+2025-07-02,chatgpt.com,1,1,1
+2025-07-02,ecosia.org,1,1,14
+2025-07-02,m.facebook.com,1,0,1
+2025-07-02,m.youtube.com,1,1,1
+2025-07-03,duckduckgo,1,1,1
+2025-07-03,hattila.com,1,1,1
+2025-07-03,ig,1,1,2
+2025-07-03,l.facebook.com,1,1,1
+2025-07-03,search.lilo.org,1,1,9
+2025-07-03,secure-magenta.dalenys.com,1,1,19
+2025-07-03,youcare.world,1,1,1
+2025-07-04,chatgpt.com,1,1,2
+2025-07-04,duckduckgo,1,1,1
+2025-07-04,ecosia.org,1,1,1
+2025-07-04,facebook.com,1,1,1
+2025-07-04,fr.search.yahoo.com,1,1,1
+2025-07-04,l.facebook.com,1,1,10
+2025-07-04,qwant.com,1,1,1
+2025-07-04,uk.search.yahoo.com,1,1,12
+2025-07-05,checkout.getalma.eu,1,1,6
+2025-07-05,mail02.orange.fr,1,1,9
+2025-07-05,qwant.com,1,1,1
+2025-07-06,(not set),1,1,3
+2025-07-06,copilot.microsoft.com,1,1,1
+2025-07-06,fr.search.yahoo.com,1,1,1
+2025-07-06,ig,1,0,1
+2025-07-06,m.youtube.com,1,1,11
+2025-07-07,(data not available),1,1,1
+2025-07-07,checkout.getalma.eu,1,1,10
+2025-07-07,ecosia.org,1,1,2
+2025-07-07,grives.net,1,1,1
+2025-07-07,l.facebook.com,1,1,11
+2025-07-07,lm.facebook.com,1,1,45
+2025-07-08,ecosia.org,1,1,3
+2025-07-08,fr.search.yahoo.com,1,1,1
+2025-07-08,ig,1,1,11
+2025-07-08,m.facebook.com,1,1,5
+2025-07-08,mail02.orange.fr,1,1,51
+2025-07-08,youcare.world,1,1,15
+2025-07-09,duckduckgo,1,1,1
+2025-07-09,ecosia.org,1,1,1
+2025-07-09,ig,1,1,1
+2025-07-09,qwant.com,1,1,2
+2025-07-10,(data not available),1,1,1
+2025-07-10,fr.search.yahoo.com,1,1,1
+2025-07-10,l.facebook.com,1,1,30
+2025-07-10,l.instagram.com,1,1,8
+2025-07-10,yahoo,1,1,1

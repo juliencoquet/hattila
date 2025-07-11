@@ -337,6 +337,16 @@ def translate_text(text, target_language):
             'Table of Contents': 'Table des matières',
             'Property Overview': 'Aperçu de la propriété',
             'Key Metrics': 'Métriques clés',
+            'Analytics Report for {property_name} - {date}': 'Rapport d\'analyse pour {property_name} - {date}',
+            'Analytics Report': 'Rapport d\'analyse',
+            'Property': 'Propriété',
+            'Report Date': 'Date du rapport',
+            'Key Performance Metrics': 'Métriques de performance clés',
+            'Key Insights': 'Insights clés',
+            'URL Analysis': 'Analyse d\'URL',
+            'PageSpeed Performance': 'Performance PageSpeed',
+            'site average': 'moyenne du site',
+            'This URL received' : 'Cette URL a reçu'
             # Add more French translations
         },
         'es': {

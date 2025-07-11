@@ -9,6 +9,7 @@ import os
 import json
 import datetime
 import re
+import time
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -25,17 +26,20 @@ from translations import translate_text
 class StorytellingGenerator:
     """Generates narrative reports from GA4 analysis data"""
     
-    def __init__(self, config, language="en"):
+    def __init__(self, config, language="en", custom_title=None):
         """
         Initialize the storytelling generator.
         
         Args:
             config: Configuration object
             language (str): Language for the reports (default: "en")
+            custom_title (str, optional): Custom title for the document
         """
+        
         self.config = config
         self.output_dir = config.get_output_directory()
         self.language = language
+        self.custom_title = custom_title
         self.translated_cache = {}
         
         # Google API credentials
@@ -82,18 +86,92 @@ class StorytellingGenerator:
         Returns:
             str: Translated text
         """
+
         if self.language == "en":
             return text
         
-        # Check cache first
+       # Check cache first
         if text in self.translated_cache:
-            return self.translated_cache[text]
+            cached_result = self.translated_cache[text]
+            return cached_result
         
         # Translate
         translated = translate_text(text, self.language)
         self.translated_cache[text] = translated
         return translated
-    
+
+    def _add_pagespeed_section_simple(self, doc_id, pagespeed_data):
+        """
+        Add a simplified PageSpeed section to avoid complex formatting issues.
+        
+        Args:
+            doc_id (str): Google Doc ID
+            pagespeed_data (dict): PageSpeed data
+        """
+        try:
+            end_index = self._get_safe_insert_index(doc_id)
+            requests = []
+            
+            requests.append({
+                'insertText': {
+                    'location': {
+                        'index': end_index
+                    },
+                    'text': f"### {self._t('PageSpeed Performance')}\n\n"
+                }
+            })
+            
+            current_index = end_index + len(f"### {self._t('PageSpeed Performance')}\n\n")
+            
+            pagespeed_text = ""
+            
+            # Process mobile and desktop scores
+            for strategy in ["mobile", "desktop"]:
+                strategy_data = pagespeed_data.get(strategy, {})
+                if not strategy_data:
+                    continue
+                
+                categories = strategy_data.get("categories", {})
+                performance = categories.get("performance", {})
+                
+                if performance:
+                    score = performance.get("score", 0)
+                    score_text = self._get_score_text(score)
+                    
+                    pagespeed_text += f"- **{self._t(strategy.title())} Performance**: {score:.0f}/100 ({self._t(score_text)})\n"
+            
+            if pagespeed_text:
+                requests.append({
+                    'insertText': {
+                        'location': {
+                            'index': current_index
+                        },
+                        'text': pagespeed_text + "\n"
+                    }
+                })
+            
+            # Execute the PageSpeed batch update
+            if requests:
+                self.docs_service.documents().batchUpdate(
+                    documentId=doc_id,
+                    body={'requests': requests}
+                ).execute()
+        
+        except Exception as e:
+            print(f"Error adding PageSpeed section: {e}")
+
+    def connect_to_google_apis(self, credentials_path=None):
+        """
+        Connect to Google Docs and Drive APIs using OAuth.
+        
+        Args:
+            credentials_path (str, optional): Path to client secrets JSON file
+                
+        Returns:
+            bool: True if successful, False otherwise
+        """
+        return self.connect_to_google_apis_oauth(credentials_path)
+
     def connect_to_google_apis_serviceaccount(self, credentials_path):
         """
         Connect to Google Docs and Drive APIs.
@@ -174,11 +252,16 @@ class StorytellingGenerator:
                 analysis = json.load(f)
             
             # Create a title for the document
-            property_name = analysis.get("property_name", "GA4 Analysis")
-            timestamp = datetime.datetime.fromisoformat(analysis.get("timestamp", datetime.datetime.now().isoformat()))
-            formatted_date = timestamp.strftime("%Y-%m-%d")
+            if self.custom_title:
+                doc_title = self.custom_title
+            else:   
+                property_name = analysis.get("property_name", "GA4 Analysis")
+                timestamp = datetime.datetime.fromisoformat(analysis.get("timestamp", datetime.datetime.now().isoformat()))
+                formatted_date = timestamp.strftime("%Y-%m-%d")
             
-            doc_title = f"{property_name} - Analytics Report ({formatted_date})"
+                # Translate the default title
+                title_template = self._t("Analytics Report for {property_name} - {date}")
+                doc_title = title_template.format(property_name=property_name, date=formatted_date)     
             
             # Create a new document or use template
             if template_doc_id:
@@ -407,118 +490,97 @@ class StorytellingGenerator:
     
     def _generate_property_overview(self, doc_id, analysis):
         """
-        Generate property overview section.
+        Generate property overview section, preserving template structure.
         
         Args:
             doc_id (str): Google Doc ID
             analysis (dict): Analysis data
         """
         try:
-            property_name = analysis.get("property_name", "GA4 Analysis")
+            # Get the document to see its current structure
+            document = self.docs_service.documents().get(documentId=doc_id).execute()
+            
+            # Find if there's already content (template)
+            has_template_content = False
+            for element in document.get('body', {}).get('content', []):
+                if 'paragraph' in element:
+                    for run in element.get('paragraph', {}).get('elements', []):
+                        content = run.get('textRun', {}).get('content', '')
+                        if 'Titre' in content or 'Section' in content:
+                            has_template_content = True
+                            break
+            
+            if has_template_content:
+                # Template was used - append analytics data to the end
+                end_index = self._get_safe_insert_index(doc_id)
+                
+                # Add analytics section header
+                requests = []
+                requests.append({
+                    'insertText': {
+                        'location': {
+                            'index': end_index
+                        },
+                        'text': f"\n\n# {self._t('Analytics Report')}\n\n"
+                    }
+                })
+                
+                # Add property name and date
+                property_name = analysis.get("property_name", "GA4 Analysis")
+                timestamp = datetime.datetime.fromisoformat(analysis.get("timestamp", datetime.datetime.now().isoformat()))
+                formatted_date = timestamp.strftime("%Y-%m-%d")
+                
+                current_index = end_index + len(f"\n\n# {self._t('Analytics Report')}\n\n")
+                
+                requests.append({
+                    'insertText': {
+                        'location': {
+                            'index': current_index
+                        },
+                        'text': f"**{self._t('Property')}**: {property_name}\n"
+                    }
+                })
+                
+                current_index += len(f"**{self._t('Property')}**: {property_name}\n")
+                
+                requests.append({
+                    'insertText': {
+                        'location': {
+                            'index': current_index
+                        },
+                        'text': f"**{self._t('Report Date')}**: {formatted_date}\n\n"
+                    }
+                })
+                
+                current_index += len(f"**{self._t('Report Date')}**: {formatted_date}\n\n")
+                
+            else:
+                # No template - create content from scratch (existing behavior)
+                self._generate_property_overview_from_scratch(doc_id, analysis)
+                return
+            
+            # Add key metrics section
             property_metrics = analysis.get("property_metrics", {})
             
-            # Create a batch update request
-            requests = []
-            
-            # Add title
-            requests.append({
-                'insertText': {
-                    'location': {
-                        'index': 1
-                    },
-                    'text': f"{self._t('Analytics Report for')}: {property_name}\n\n"
-                }
-            })
-            
-            # Add formatted timestamp
-            timestamp = datetime.datetime.fromisoformat(analysis.get("timestamp", datetime.datetime.now().isoformat()))
-            formatted_date = timestamp.strftime("%Y-%m-%d")
-            
-            requests.append({
-                'insertText': {
-                    'location': {
-                        'index': len(f"{self._t('Analytics Report for')}: {property_name}\n\n") + 1
-                    },
-                    'text': f"{self._t('Report Date')}: {formatted_date}\n\n"
-                }
-            })
-            
-            # Add table of contents placeholder
-            requests.append({
-                'insertText': {
-                    'location': {
-                        'index': len(f"{self._t('Analytics Report for')}: {property_name}\n\n{self._t('Report Date')}: {formatted_date}\n\n") + 1
-                    },
-                    'text': f"{self._t('Table of Contents')}\n\n"
-                }
-            })
-            
-            # Add property overview section
-            current_index = len(f"{self._t('Analytics Report for')}: {property_name}\n\n{self._t('Report Date')}: {formatted_date}\n\n{self._t('Table of Contents')}\n\n") + 1
-            
             requests.append({
                 'insertText': {
                     'location': {
                         'index': current_index
                     },
-                    'text': f"{self._t('Property Overview')}\n\n"
+                    'text': f"## {self._t('Key Performance Metrics')}\n\n"
                 }
             })
             
-            # Add style to the section header
-            requests.append({
-                'updateParagraphStyle': {
-                    'range': {
-                        'startIndex': current_index,
-                        'endIndex': current_index + len(f"{self._t('Property Overview')}")
-                    },
-                    'paragraphStyle': {
-                        'namedStyleType': 'HEADING_1'
-                    },
-                    'fields': 'namedStyleType'
-                }
-            })
+            current_index += len(f"## {self._t('Key Performance Metrics')}\n\n")
             
-            # Add key metrics
-            current_index += len(f"{self._t('Property Overview')}\n\n")
-            
-            requests.append({
-                'insertText': {
-                    'location': {
-                        'index': current_index
-                    },
-                    'text': f"{self._t('Key Metrics')}\n\n"
-                }
-            })
-            
-            # Add style to the subsection header
-            requests.append({
-                'updateParagraphStyle': {
-                    'range': {
-                        'startIndex': current_index,
-                        'endIndex': current_index + len(f"{self._t('Key Metrics')}")
-                    },
-                    'paragraphStyle': {
-                        'namedStyleType': 'HEADING_2'
-                    },
-                    'fields': 'namedStyleType'
-                }
-            })
-            
-            # Create a table for key metrics
-            current_index += len(f"{self._t('Key Metrics')}\n\n")
-            
-            # Prepare metrics for table
-            metric_rows = []
-            
-            # Define key metrics to show
+            # Create formatted metrics text instead of table
+            metrics_text = ""
             key_metrics = [
                 ('sessions', 'Sessions'),
                 ('activeUsers', 'Active Users'),
                 ('screenPageViews', 'Page Views'),
-                ('engagementRate', 'Engagement Rate (%)'),
-                ('conversionRate', 'Conversion Rate (%)'),
-                ('averageSessionDuration', 'Avg. Session Duration (sec)')
+                ('engagementRate', 'Engagement Rate'),
+                ('conversionRate', 'Conversion Rate'),
             ]
             
             for metric_id, metric_name in key_metrics:
@@ -528,268 +590,49 @@ class StorytellingGenerator:
                     # Format the value
                     if isinstance(value, float):
                         if metric_id in ['engagementRate', 'conversionRate']:
-                            formatted_value = f"{value:.2f}%"
+                            formatted_value = f"{value:.1f}%"
                         else:
-                            formatted_value = f"{value:,.2f}" if value % 1 != 0 else f"{int(value):,}"
+                            formatted_value = f"{value:,.0f}" if value >= 1 else f"{value:.2f}"
                     else:
                         formatted_value = str(value)
                     
-                    metric_rows.append([self._t(metric_name), formatted_value])
+                    metrics_text += f"- **{self._t(metric_name)}**: {formatted_value}\n"
             
-            # Create table with 2 columns (metric name and value)
-            # Only create a table if we have data
-            if len(metric_rows) > 0:
-                # Create table with 2 columns (metric name and value)
-                table = {
-                    'insertTable': {
-                        'location': {
-                            'index': current_index
-                        },
-                        'rows': len(metric_rows),
-                        'columns': 2
-                    }
-                }
-                
-                requests.append(table)
-            else:
-                # Add a message if no metrics are available
+            if metrics_text:
                 requests.append({
                     'insertText': {
                         'location': {
                             'index': current_index
                         },
-                        'text': f"{self._t('No metrics data available.')}\n\n"
+                        'text': metrics_text + "\n"
                     }
                 })
+                current_index += len(metrics_text + "\n")
             
-            # Execute batch update to create the table
-            self.docs_service.documents().batchUpdate(
-                documentId=doc_id,
-                body={'requests': requests}
-            ).execute()
-            
-            # Get the latest document to find the table
-            document = self.docs_service.documents().get(documentId=doc_id).execute()
-            
-            # Find the table
-            table_id = None
-            table_index = 0
-            for element in document.get('body', {}).get('content', []):
-                if 'table' in element:
-                    table_id = element.get('table', {}).get('tableId')
-                    break
-                table_index += 1
-            
-            if table_id:
-                # Now populate the table with data
-                cell_requests = []
-                
-                for i, row in enumerate(metric_rows):
-                    for j, cell_content in enumerate(row):
-                        cell_requests.append({
-                            'insertText': {
-                                'location': {
-                                    'tableId': table_id,
-                                    'rowIndex': i,
-                                    'columnIndex': j,
-                                    'index': 0
-                                },
-                                'text': cell_content
-                            }
-                        })
-                
-                # Execute batch update to fill the table
-                if cell_requests:
-                    self.docs_service.documents().batchUpdate(
-                        documentId=doc_id,
-                        body={'requests': cell_requests}
-                    ).execute()
-            
-            # Add marketing channels section
-            marketing_channels = analysis.get("marketing_channels", {})
-            
-            if marketing_channels:
-                # Create a batch update request
-                requests = []
-                
-                # Get the document to find the end
-                document = self.docs_service.documents().get(documentId=doc_id).execute()
-                document_content = document.get('body', {}).get('content', [])
-
-                # If the document is completely empty, insert at index 1
-                if not document_content:
-                    end_index = 1
-                else:
-                    # Get the last content element
-                    last_element = document_content[-1]
-                    end_index = last_element.get('endIndex', 0)
-                    
-                    # If the end index points to the beginning of the document (rare edge case),
-                    # set it to position 1 (after the initial document position)
-                    if end_index <= 1:
-                        end_index = 1
-                    
-                    # If we're exactly at the end, back up one position to avoid the API error
-                    if end_index > 1:
-                        end_index -= 1
-                                
-                # Add section header
+            # Add story-driven insights based on actual data
+            story_text = self._generate_property_story(analysis)
+            if story_text:
                 requests.append({
                     'insertText': {
                         'location': {
-                            'index': end_index
+                            'index': current_index
                         },
-                        'text': f"\n{self._t('Marketing Channels')}\n\n"
+                        'text': f"## {self._t('Key Insights')}\n\n{story_text}\n"
                     }
                 })
-                
-                # Style the header
-                header_end_index = end_index + len(f"\n{self._t('Marketing Channels')}")
-                requests.append({
-                    'updateParagraphStyle': {
-                        'range': {
-                            'startIndex': end_index + 1,  # +1 to skip the newline
-                            'endIndex': header_end_index
-                        },
-                        'paragraphStyle': {
-                            'namedStyleType': 'HEADING_2'
-                        },
-                        'fields': 'namedStyleType'
-                    }
-                })
-                
-                # Create a chart image for marketing channels
-                if len(marketing_channels) > 0:
-                    chart_path = self._create_marketing_channels_chart(marketing_channels)
-                    
-                    if chart_path:
-                        # Upload the chart image to Drive
-                        file_metadata = {
-                            'name': 'marketing_channels_chart.png',
-                            'mimeType': 'image/png'
-                        }
-                        
-                        media = MediaFileUpload(chart_path, mimetype='image/png')
-                                        
-                file = self.drive_service.files().create(
-                    body=file_metadata,
-                    media_body=media,
-                    fields='id'
+            
+            # Execute the batch update
+            if requests:
+                self.docs_service.documents().batchUpdate(
+                    documentId=doc_id,
+                    body={'requests': requests}
                 ).execute()
-
-                image_id = file.get('id')
-
-                if image_id:
-                    try:
-                        # Make the image accessible to anyone with the link
-                        self.drive_service.permissions().create(
-                            fileId=image_id,
-                            body={
-                                'type': 'anyone',
-                                'role': 'reader'
-                            }
-                        ).execute()
-                        
-                        # Insert the image into the document
-                        requests.append({
-                            'insertInlineImage': {
-                                'location': {
-                                    'index': header_end_index + 2  # +2 to skip the newlines
-                                },
-                                'uri': f"https://drive.google.com/uc?id={image_id}",
-                                'objectSize': {
-                                    'height': {
-                                        'magnitude': 300,
-                                        'unit': 'PT'
-                                    },
-                                    'width': {
-                                        'magnitude': 500,
-                                        'unit': 'PT'
-                                    }
-                                }
-                            }
-                        })
-                    except Exception as e:
-                        print(f"Error making image public or inserting image: {e}")
-                        # Continue without the image                
-                # Execute the batch update
-                if requests:
-                    self.docs_service.documents().batchUpdate(
-                        documentId=doc_id,
-                        body={'requests': requests}
-                    ).execute()
-            
-            # Add conversion metrics section if available
-            conversion_metrics = analysis.get("conversion_metrics", {})
-            
-            if conversion_metrics:
-                # Create a batch update request
-                requests = []
-                
-                # Get the document to find the end
-                document = self.docs_service.documents().get(documentId=doc_id).execute()
-                end_index = document.get('body', {}).get('content', [-1])[-1].get('endIndex', 0)
-                
-                # Add section header
-                requests.append({
-                    'insertText': {
-                        'location': {
-                            'index': end_index
-                        },
-                        'text': f"\n{self._t('Conversion Metrics')}\n\n"
-                    }
-                })
-                
-                # Style the header
-                header_end_index = end_index + len(f"\n{self._t('Conversion Metrics')}")
-                requests.append({
-                    'updateParagraphStyle': {
-                        'range': {
-                            'startIndex': end_index + 1,  # +1 to skip the newline
-                            'endIndex': header_end_index
-                        },
-                        'paragraphStyle': {
-                            'namedStyleType': 'HEADING_2'
-                        },
-                        'fields': 'namedStyleType'
-                    }
-                })
-                
-                # Add conversion metrics text
-                conversion_text = ""
-                
-                for event_name, event_data in conversion_metrics.items():
-                    conversion_text += f"{event_name}: "
-                    
-                    for metric_name, metric_value in event_data.items():
-                        if isinstance(metric_value, (int, float)):
-                            formatted_value = f"{metric_value:,.0f}" if metric_value % 1 == 0 else f"{metric_value:,.2f}"
-                            conversion_text += f"{metric_name}: {formatted_value}, "
-                    
-                    conversion_text = conversion_text.rstrip(", ") + "\n"
-                
-                if conversion_text:
-                    requests.append({
-                        'insertText': {
-                            'location': {
-                                'index': header_end_index + 2  # +2 to skip the newlines
-                            },
-                            'text': conversion_text
-                        }
-                    })
-                
-                # Execute the batch update
-                if requests:
-                    self.docs_service.documents().batchUpdate(
-                        documentId=doc_id,
-                        body={'requests': requests}
-                    ).execute()
             
         except Exception as e:
             print(f"Error generating property overview: {e}")
             import traceback
             traceback.print_exc()
-    
+ 
     def _create_marketing_channels_chart(self, channels_data):
         """
         Create a chart image for marketing channels.
@@ -876,9 +719,104 @@ class StorytellingGenerator:
             import traceback
             traceback.print_exc()
             return None
-    
-    def _generate_url_section(self, doc_id, url, url_data, property_metrics):
 
+    def _generate_property_story(self, analysis):
+        """
+        Generate a narrative story based on the actual analysis data.
+        
+        Args:
+            analysis (dict): Analysis data
+            
+        Returns:
+            str: Story text based on real data
+        """
+        story_parts = []
+        
+        # Analyze property metrics
+        property_metrics = analysis.get("property_metrics", {})
+        
+        # Sessions story
+        sessions = property_metrics.get("sessions", 0)
+        active_users = property_metrics.get("activeUsers", 0)
+        
+        if sessions > 0:
+            if active_users > 0:
+                sessions_per_user = sessions / active_users
+                story_parts.append(
+                    f"Your website attracted **{active_users:,.0f} unique visitors** who generated "
+                    f"**{sessions:,.0f} sessions** in total, averaging **{sessions_per_user:.1f} sessions per user**."
+                )
+            else:
+                story_parts.append(f"Your website recorded **{sessions:,.0f} sessions** during the analysis period.")
+        
+        # Engagement story
+        engagement_rate = property_metrics.get("engagementRate", 0)
+        if engagement_rate > 0:
+            if engagement_rate >= 70:
+                story_parts.append(
+                    f"User engagement is **strong at {engagement_rate:.1f}%**, indicating visitors find your content valuable and interact meaningfully with your site."
+                )
+            elif engagement_rate >= 50:
+                story_parts.append(
+                    f"User engagement is **moderate at {engagement_rate:.1f}%**. There's room for improvement in making content more interactive and compelling."
+                )
+            else:
+                story_parts.append(
+                    f"User engagement is **lower than optimal at {engagement_rate:.1f}%**. This suggests visitors may not be finding what they're looking for quickly enough."
+                )
+        
+        # Conversion story
+        conversion_rate = property_metrics.get("conversionRate", 0)
+        if conversion_rate > 0:
+            if conversion_rate >= 3:
+                story_parts.append(
+                    f"Your conversion rate of **{conversion_rate:.2f}% is performing well**, indicating effective user journeys and clear calls-to-action."
+                )
+            elif conversion_rate >= 1:
+                story_parts.append(
+                    f"Your conversion rate of **{conversion_rate:.2f}% has potential for improvement**. Consider optimizing your conversion funnels and reducing friction points."
+                )
+            else:
+                story_parts.append(
+                    f"Your conversion rate of **{conversion_rate:.2f}% suggests significant optimization opportunities** in your user experience and conversion paths."
+                )
+        
+        # URL-specific insights
+        urls_data = analysis.get("urls", {})
+        successful_urls = [url for url, data in urls_data.items() if data.get("status") == "success"]
+        
+        if successful_urls:
+            story_parts.append(f"**{len(successful_urls)} specific pages** were analyzed in detail, revealing page-by-page performance insights.")
+            
+            # Find best and worst performing pages
+            url_sessions = {}
+            for url, data in urls_data.items():
+                if data.get("status") == "success":
+                    metrics = data.get("metrics", {})
+                    sessions = metrics.get("sessions", 0)
+                    if sessions > 0:
+                        url_sessions[url] = sessions
+            
+            if url_sessions:
+                best_url = max(url_sessions.items(), key=lambda x: x[1])
+                worst_url = min(url_sessions.items(), key=lambda x: x[1])
+                
+                if len(url_sessions) > 1:
+                    story_parts.append(
+                        f"Your top-performing page received **{best_url[1]:,.0f} sessions**, while your lowest-traffic analyzed page had **{worst_url[1]:,.0f} sessions**."
+                    )
+        
+        return "\n\n".join(story_parts)
+
+    def _generate_property_overview_from_scratch(self, doc_id, analysis):
+        """
+        Generate property overview from scratch (when no template is used).
+        """
+        # This is your existing _generate_property_overview logic
+        # Move your current _generate_property_overview content here
+        pass
+
+    def _generate_url_section_old(self, doc_id, url, url_data, property_metrics):
         """
         Generate a section for a specific URL.
         
@@ -889,9 +827,8 @@ class StorytellingGenerator:
             property_metrics (dict): Property-level metrics for comparison
         """
         try:
-            # Get the document to find the end
-            document = self.docs_service.documents().get(documentId=doc_id).execute()
-            end_index = document.get('body', {}).get('content', [-1])[-1].get('endIndex', 0)
+            # Get a safe insertion point
+            end_index = self._get_safe_insert_index(doc_id)
             
             # Create a batch update request
             requests = []
@@ -913,27 +850,12 @@ class StorytellingGenerator:
                     'location': {
                         'index': end_index
                     },
-                    'text': f"\n{self._t('URL Analysis')}: {display_url}\n\n"
+                    'text': f"\n\n## {self._t('URL Analysis')}: {display_url}\n\n"
                 }
             })
             
-            # Style the header
-            header_end_index = end_index + len(f"\n{self._t('URL Analysis')}: {display_url}")
-            requests.append({
-                'updateParagraphStyle': {
-                    'range': {
-                        'startIndex': end_index + 1,  # +1 to skip the newline
-                        'endIndex': header_end_index
-                    },
-                    'paragraphStyle': {
-                        'namedStyleType': 'HEADING_1'
-                    },
-                    'fields': 'namedStyleType'
-                }
-            })
-            
-            # Add URL metrics
-            current_index = header_end_index + 2  # +2 to skip the newlines
+            # Calculate new index position
+            current_index = end_index + len(f"\n\n## {self._t('URL Analysis')}: {display_url}\n\n")
             
             # Add key metrics section
             requests.append({
@@ -941,42 +863,26 @@ class StorytellingGenerator:
                     'location': {
                         'index': current_index
                     },
-                    'text': f"{self._t('Key Metrics')}\n\n"
+                    'text': f"### {self._t('Key Metrics')}\n\n"
                 }
             })
             
-            # Style the subheader
-            subheader_end_index = current_index + len(f"{self._t('Key Metrics')}")
-            requests.append({
-                'updateParagraphStyle': {
-                    'range': {
-                        'startIndex': current_index,
-                        'endIndex': subheader_end_index
-                    },
-                    'paragraphStyle': {
-                        'namedStyleType': 'HEADING_2'
-                    },
-                    'fields': 'namedStyleType'
-                }
-            })
+            current_index += len(f"### {self._t('Key Metrics')}\n\n")
             
             # Extract key metrics for this URL
             metrics = url_data.get("metrics", {})
             
             if metrics:
-                # Create a table for key metrics
-                current_index = subheader_end_index + 2  # +2 to skip the newlines
-                
-                # Prepare metrics for table
-                metric_rows = []
+                # Create formatted metrics text instead of table
+                metrics_text = ""
                 
                 # Define key metrics to show
                 key_metrics = [
                     ('sessions', 'Sessions'),
                     ('activeUsers', 'Active Users'),
                     ('screenPageViews', 'Page Views'),
-                    ('engagementRate', 'Engagement Rate (%)'),
-                    ('conversionRate', 'Conversion Rate (%)'),
+                    ('engagementRate', 'Engagement Rate'),
+                    ('conversionRate', 'Conversion Rate'),
                     ('pageviewsPerSession', 'Pageviews per Session')
                 ]
                 
@@ -987,9 +893,9 @@ class StorytellingGenerator:
                         # Format the value
                         if isinstance(value, float):
                             if metric_id in ['engagementRate', 'conversionRate']:
-                                formatted_value = f"{value:.2f}%"
+                                formatted_value = f"{value:.1f}%"
                             else:
-                                formatted_value = f"{value:,.2f}" if value % 1 != 0 else f"{int(value):,}"
+                                formatted_value = f"{value:,.1f}" if value % 1 != 0 else f"{int(value):,}"
                         else:
                             formatted_value = str(value)
                         
@@ -1001,119 +907,58 @@ class StorytellingGenerator:
                             
                             if abs(diff_pct) >= 5:  # Only show significant differences
                                 comparison = self._t("higher than") if diff_pct > 0 else self._t("lower than")
-                                comparison_text = f" ({abs(diff_pct):.1f}% {comparison} {self._t('property average')})"
+                                comparison_text = f" ({abs(diff_pct):.1f}% {comparison} {self._t('site average')})"
                         
-                        metric_rows.append([self._t(metric_name), formatted_value + comparison_text])
+                        metrics_text += f"- **{self._t(metric_name)}**: {formatted_value}{comparison_text}\n"
                 
-                # Create table with 2 columns (metric name and value)
-                # Only create a table if we have data
-                if len(metric_rows) > 0:
-                    # Create table with 2 columns (metric name and value)
-                    table = {
-                        'insertTable': {
-                            'location': {
-                                'index': current_index
-                            },
-                            'rows': len(metric_rows),
-                            'columns': 2
-                        }
-                    }
-                    
-                    requests.append(table)
-                else:
-                    # Add a message if no metrics are available
+                if metrics_text:
                     requests.append({
                         'insertText': {
                             'location': {
                                 'index': current_index
                             },
-                            'text': f"{self._t('No metrics data available.')}\n\n"
+                            'text': metrics_text + "\n"
                         }
                     })
-                
-                # Execute batch update to create the table
+                    current_index += len(metrics_text + "\n")
+            else:
+                # Add message if no metrics available
+                requests.append({
+                    'insertText': {
+                        'location': {
+                            'index': current_index
+                        },
+                        'text': f"{self._t('No metrics data available for this URL.')}\n\n"
+                    }
+                })
+                current_index += len(f"{self._t('No metrics data available for this URL.')}\n\n")
+            
+            # Execute the first batch update
+            if requests:
                 self.docs_service.documents().batchUpdate(
                     documentId=doc_id,
                     body={'requests': requests}
                 ).execute()
-                
-                # Get the latest document to find the table
-                document = self.docs_service.documents().get(documentId=doc_id).execute()
-                
-                # Find the table
-                table_id = None
-                for element in document.get('body', {}).get('content', []):
-                    if 'table' in element:
-                        if element.get('startIndex', 0) >= current_index:
-                            table_id = element.get('table', {}).get('tableId')
-                            break
-                
-                if table_id:
-                    # Now populate the table with data
-                    cell_requests = []
-                    
-                    for i, row in enumerate(metric_rows):
-                        for j, cell_content in enumerate(row):
-                            cell_requests.append({
-                                'insertText': {
-                                    'location': {
-                                        'tableId': table_id,
-                                        'rowIndex': i,
-                                        'columnIndex': j,
-                                        'index': 0
-                                    },
-                                    'text': cell_content
-                                }
-                            })
-                    
-                    # Execute batch update to fill the table
-                    if cell_requests:
-                        self.docs_service.documents().batchUpdate(
-                            documentId=doc_id,
-                            body={'requests': cell_requests}
-                        ).execute()
+                requests = []  # Clear requests
             
             # Add insights section
-            # Get the document to find the end
-            document = self.docs_service.documents().get(documentId=doc_id).execute()
-            end_index = document.get('body', {}).get('content', [-1])[-1].get('endIndex', 0)
-            
-            # Create a batch update request
-            requests = []
-            
-            # Add insights header
-            requests.append({
-                'insertText': {
-                    'location': {
-                        'index': end_index
-                    },
-                    'text': f"\n{self._t('Insights')}\n\n"
-                }
-            })
-            
-            # Style the header
-            insights_header_index = end_index + 1  # +1 to skip the newline
-            insights_header_end = insights_header_index + len(self._t('Insights'))
-            
-            requests.append({
-                'updateParagraphStyle': {
-                    'range': {
-                        'startIndex': insights_header_index,
-                        'endIndex': insights_header_end
-                    },
-                    'paragraphStyle': {
-                        'namedStyleType': 'HEADING_2'
-                    },
-                    'fields': 'namedStyleType'
-                }
-            })
-            
-            # Add insights content
             insights = url_data.get("insights", [])
-            insights_text = ""
-            
             if insights:
-                # Group insights by type
+                # Get current end index
+                end_index = self._get_safe_insert_index(doc_id)
+                
+                requests.append({
+                    'insertText': {
+                        'location': {
+                            'index': end_index
+                        },
+                        'text': f"### {self._t('Key Insights')}\n\n"
+                    }
+                })
+                
+                current_index = end_index + len(f"### {self._t('Key Insights')}\n\n")
+                
+                # Group insights by type and create narrative
                 grouped_insights = {}
                 for insight in insights:
                     insight_type = insight.get("type", "other")
@@ -1121,335 +966,174 @@ class StorytellingGenerator:
                         grouped_insights[insight_type] = []
                     grouped_insights[insight_type].append(insight)
                 
-                # Add each group of insights
+                insights_text = ""
                 for insight_type, type_insights in grouped_insights.items():
-                    # Skip summary insights as we're creating our own narrative
                     if insight_type == "summary":
                         continue
                     
-                    # Format the insight type
-                    formatted_type = insight_type.replace("_", " ").title()
-                    insights_text += f"**{self._t(formatted_type)}**\n\n"
-                    
-                    # Add each insight in this group
+                    # Create a narrative for each insight type
                     for insight in type_insights:
                         finding = insight.get("finding", "")
                         if finding:
-                            insights_text += f"• {self._t(finding)}\n"
-                    
-                    insights_text += "\n"
-            else:
-                insights_text = self._t("No significant insights were found for this URL.") + "\n\n"
-            
-            # Add the insights text
-            current_index = insights_header_end + 2  # +2 to skip the newlines
-            
-            requests.append({
-                'insertText': {
-                    'location': {
-                        'index': current_index
-                    },
-                    'text': insights_text
-                }
-            })
-            
-            # Apply formatting to bolded sections
-            bold_pattern = re.compile(r'\*\*(.*?)\*\*')
-            bold_matches = bold_pattern.finditer(insights_text)
-            
-            for match in bold_matches:
-                start_pos = current_index + match.start()
-                end_pos = current_index + match.end()
+                            insights_text += f"- {self._t(finding)}\n"
                 
-                # Remove ** marks
-                requests.append({
-                    'replaceText': {
-                        'replaceText': match.group(1),
-                        'text': match.group(),
-                        'location': {'index': start_pos}
-                    }
-                })
-                
-                # Apply bold formatting
-                requests.append({
-                    'updateTextStyle': {
-                        'range': {
-                            'startIndex': start_pos,
-                            'endIndex': start_pos + len(match.group(1))
-                        },
-                        'textStyle': {
-                            'bold': True
-                        },
-                        'fields': 'bold'
-                    }
-                })
-            
-            # Execute the batch update
-            if requests:
-                self.docs_service.documents().batchUpdate(
-                    documentId=doc_id,
-                    body={'requests': requests}
-                ).execute()
-            
-            # Add PageSpeed section if available
-            pagespeed_data = url_data.get("pagespeed", {})
-            
-            if pagespeed_data:
-                # Get the document to find the end
-                document = self.docs_service.documents().get(documentId=doc_id).execute()
-                end_index = document.get('body', {}).get('content', [-1])[-1].get('endIndex', 0)
-                
-                # Create a batch update request
-                requests = []
-                
-                # Add PageSpeed header
-                requests.append({
-                    'insertText': {
-                        'location': {
-                            'index': end_index
-                        },
-                        'text': f"\n{self._t('PageSpeed Analysis')}\n\n"
-                    }
-                })
-                
-                # Style the header
-                pagespeed_header_index = end_index + 1  # +1 to skip the newline
-                pagespeed_header_end = pagespeed_header_index + len(self._t('PageSpeed Analysis'))
-                
-                requests.append({
-                    'updateParagraphStyle': {
-                        'range': {
-                            'startIndex': pagespeed_header_index,
-                            'endIndex': pagespeed_header_end
-                        },
-                        'paragraphStyle': {
-                            'namedStyleType': 'HEADING_2'
-                        },
-                        'fields': 'namedStyleType'
-                    }
-                })
-                
-                # Add PageSpeed content
-                pagespeed_text = ""
-                
-                # Process mobile and desktop scores
-                for strategy in ["mobile", "desktop"]:
-                    strategy_data = pagespeed_data.get(strategy, {})
-                    if not strategy_data:
-                        continue
-                    
-                    strategy_title = strategy.title()
-                    pagespeed_text += f"**{self._t(strategy_title)} Performance**\n\n"
-                    
-                    categories = strategy_data.get("categories", {})
-                    performance = categories.get("performance", {})
-                    
-                    if performance:
-                        score = performance.get("score", 0)
-                        score_text = self._get_score_text(score)
-                        
-                        pagespeed_text += f"{self._t('Performance Score')}: {score:.0f}/100 ({self._t(score_text)})\n\n"
-                    
-                    # Add metrics
-                    audits = strategy_data.get("audits", {})
-                    
-                    if audits:
-                        key_metrics = [
-                            ("first-contentful-paint", "First Contentful Paint"),
-                            ("largest-contentful-paint", "Largest Contentful Paint"),
-                            ("speed-index", "Speed Index"),
-                            ("total-blocking-time", "Total Blocking Time"),
-                            ("cumulative-layout-shift", "Cumulative Layout Shift"),
-                            ("interactive", "Time to Interactive")
-                        ]
-                        
-                        for metric_id, metric_name in key_metrics:
-                            metric_data = audits.get(metric_id, {})
-                            if metric_data:
-                                display_value = metric_data.get("display_value", "N/A")
-                                score = metric_data.get("score", 0)
-                                score_emoji = "✅" if score >= 90 else "⚠️" if score >= 50 else "❌"
-                                
-                                pagespeed_text += f"{score_emoji} {self._t(metric_name)}: {display_value}\n"
-                        
-                        pagespeed_text += "\n"
-                
-                # Add the PageSpeed text
-                current_index = pagespeed_header_end + 2  # +2 to skip the newlines
-                
-                requests.append({
-                    'insertText': {
-                        'location': {
-                            'index': current_index
-                        },
-                        'text': pagespeed_text
-                    }
-                })
-                
-                # Apply formatting to bolded sections
-                bold_pattern = re.compile(r'\*\*(.*?)\*\*')
-                bold_matches = bold_pattern.finditer(pagespeed_text)
-                
-                for match in bold_matches:
-                    start_pos = current_index + match.start()
-                    end_pos = current_index + match.end()
-                    
-                    # Remove ** marks
+                if insights_text:
                     requests.append({
-                        'replaceText': {
-                            'replaceText': match.group(1),
-                            'text': match.group(),
-                            'location': {'index': start_pos}
-                        }
-                    })
-                    
-                    # Apply bold formatting
-                    requests.append({
-                        'updateTextStyle': {
-                            'range': {
-                                'startIndex': start_pos,
-                                'endIndex': start_pos + len(match.group(1))
+                        'insertText': {
+                            'location': {
+                                'index': current_index
                             },
-                            'textStyle': {
-                                'bold': True
-                            },
-                            'fields': 'bold'
+                            'text': insights_text + "\n"
                         }
                     })
                 
-                # Execute the batch update
+                # Execute the insights batch update
                 if requests:
                     self.docs_service.documents().batchUpdate(
                         documentId=doc_id,
                         body={'requests': requests}
                     ).execute()
             
-            # Add marketing channels section if available
-            channel_data = metrics.get("channels", {})
+            # Add PageSpeed section if available (simplified)
+            pagespeed_data = url_data.get("pagespeed", {})
+            if pagespeed_data:
+                self._add_pagespeed_section_simple(doc_id, pagespeed_data)
             
-            if channel_data and len(channel_data) > 0:
-                # Create a chart for the channels
-                channels_dict = {}
-                for channel, data in channel_data.items():
-                    channels_dict[channel] = data.get("percentage", 0)
-                
-                chart_path = self._create_channel_chart(channels_dict, f"{self._t('Traffic Sources')}: {display_url}")
-                
-                if chart_path:
-                    # Get the document to find the end
-                    document = self.docs_service.documents().get(documentId=doc_id).execute()
-                    end_index = document.get('body', {}).get('content', [-1])[-1].get('endIndex', 0)
-                    
-                    # Create a batch update request
-                    requests = []
-                    
-                    # Add channels header
-                    requests.append({
-                        'insertText': {
-                            'location': {
-                                'index': end_index
-                            },
-                            'text': f"\n{self._t('Traffic Sources')}\n\n"
-                        }
-                    })
-                    
-                    # Style the header
-                    channels_header_index = end_index + 1  # +1 to skip the newline
-                    channels_header_end = channels_header_index + len(self._t('Traffic Sources'))
-                    
-                    requests.append({
-                        'updateParagraphStyle': {
-                            'range': {
-                                'startIndex': channels_header_index,
-                                'endIndex': channels_header_end
-                            },
-                            'paragraphStyle': {
-                                'namedStyleType': 'HEADING_2'
-                            },
-                            'fields': 'namedStyleType'
-                        }
-                    })
-                    
-                    # Upload the chart image to Drive
-                    file_metadata = {
-                        'name': f'channels_chart_{datetime.datetime.now().strftime("%Y%m%d%H%M%S")}.png',
-                        'mimeType': 'image/png'
-                    }
-                    
-                    media = MediaFileUpload(chart_path, mimetype='image/png')
-                    
-                file = self.drive_service.files().create(
-                    body=file_metadata,
-                    media_body=media,
-                    fields='id'
-                ).execute()
+        except Exception as e:
+            print(f"Error generating URL section for {url}: {e}")
+            import traceback
+            traceback.print_exc()
 
-                image_id = file.get('id')
-
-                if image_id:
-                    try:
-                        # Make the image accessible to anyone with the link
-                        self.drive_service.permissions().create(
-                            fileId=image_id,
-                            body={
-                                'type': 'anyone',
-                                'role': 'reader'
-                            }
-                        ).execute()
-                        
-                        # Insert the image into the document
-                        requests.append({
-                            'insertInlineImage': {
-                                'location': {
-                                    'index': header_end_index + 2  # +2 to skip the newlines
-                                },
-                                'uri': f"https://drive.google.com/uc?id={image_id}",
-                                'objectSize': {
-                                    'height': {
-                                        'magnitude': 300,
-                                        'unit': 'PT'
-                                    },
-                                    'width': {
-                                        'magnitude': 500,
-                                        'unit': 'PT'
-                                    }
-                                }
-                            }
-                        })
-                    except Exception as e:
-                        print(f"Error making image public or inserting image: {e}")
-                        # Continue without the image
-                        
-                        # Execute the batch update
-                        if requests:
-                            self.docs_service.documents().batchUpdate(
-                                documentId=doc_id,
-                                body={'requests': requests}
-                            ).execute()
+    def _generate_url_section(self, doc_id, url, url_data, property_metrics):
+        """
+        Generate a section for a specific URL with fewer API calls.
+        """
+        try:
+            # Collect ALL content for this URL section first
+            all_content = []
             
-            # Add a line break at the end of the URL section
-            document = self.docs_service.documents().get(documentId=doc_id).execute()
-            end_index = document.get('body', {}).get('content', [-1])[-1].get('endIndex', 0)
+            # Add section header
+            display_url = url
+            if len(url) > 60:
+                parsed_url = url.split('//')
+                if len(parsed_url) > 1:
+                    domain = parsed_url[1].split('/')[0]
+                    path = '/' + '/'.join(parsed_url[1].split('/')[1:])
+                    if len(path) > 40:
+                        path = path[:37] + '...'
+                    display_url = parsed_url[0] + '//' + domain + path
             
+            all_content.append(f"\n\n## {self._t('URL Analysis')}: {display_url}\n\n")
+            
+            # Add metrics section
+            all_content.append(f"### {self._t('Key Metrics')}\n\n")
+            
+            metrics = url_data.get("metrics", {})
+            if metrics:
+                key_metrics = [
+                    ('sessions', 'Sessions'),
+                    ('activeUsers', 'Active Users'),
+                    ('screenPageViews', 'Page Views'),
+                    ('engagementRate', 'Engagement Rate'),
+                    ('conversionRate', 'Conversion Rate'),
+                    ('pageviewsPerSession', 'Pageviews per Session')
+                ]
+                
+                for metric_id, metric_name in key_metrics:
+                    if metric_id in metrics:
+                        value = metrics[metric_id]
+                        
+                        if isinstance(value, float):
+                            if metric_id in ['engagementRate', 'conversionRate']:
+                                formatted_value = f"{value:.1f}%"
+                            else:
+                                formatted_value = f"{value:,.1f}" if value % 1 != 0 else f"{int(value):,}"
+                        else:
+                            formatted_value = str(value)
+                        
+                        # Compare to property metrics
+                        comparison_text = ""
+                        if metric_id in property_metrics and property_metrics[metric_id] > 0:
+                            prop_value = property_metrics[metric_id]
+                            diff_pct = ((value - prop_value) / prop_value) * 100
+                            
+                            if abs(diff_pct) >= 5:
+                                comparison = self._t("higher than") if diff_pct > 0 else self._t("lower than")
+                                comparison_text = f" ({abs(diff_pct):.1f}% {comparison} {self._t('site average')})"
+                        
+                        all_content.append(f"- **{self._t(metric_name)}**: {formatted_value}{comparison_text}\n")
+            else:
+                all_content.append(f"{self._t('No metrics data available for this URL.')}\n")
+            
+            all_content.append("\n")
+            
+            # Add insights section
+            insights = url_data.get("insights", [])
+            if insights:
+                all_content.append(f"### {self._t('Key Insights')}\n\n")
+                
+                grouped_insights = {}
+                for insight in insights:
+                    insight_type = insight.get("type", "other")
+                    if insight_type not in grouped_insights:
+                        grouped_insights[insight_type] = []
+                    grouped_insights[insight_type].append(insight)
+                
+                for insight_type, type_insights in grouped_insights.items():
+                    if insight_type == "summary":
+                        continue
+                    
+                    for insight in type_insights:
+                        finding = insight.get("finding", "")
+                        if finding:
+                            all_content.append(f"- {self._t(finding)}\n")
+                
+                all_content.append("\n")
+            
+            # Add PageSpeed section
+            pagespeed_data = url_data.get("pagespeed", {})
+            if pagespeed_data:
+                all_content.append(f"### {self._t('PageSpeed Performance')}\n\n")
+                
+                for strategy in ["mobile", "desktop"]:
+                    strategy_data = pagespeed_data.get(strategy, {})
+                    if strategy_data:
+                        categories = strategy_data.get("categories", {})
+                        performance = categories.get("performance", {})
+                        
+                        if performance:
+                            score = performance.get("score", 0)
+                            score_text = self._get_score_text(score)
+                            all_content.append(f"- **{self._t(strategy.title())} Performance**: {score:.0f}/100 ({self._t(score_text)})\n")
+                
+                all_content.append("\n")
+            
+            # Now make ONE API call with all the content
+            combined_content = "".join(all_content)
+            end_index = self._get_safe_insert_index(doc_id)
+            
+            # Add rate limiting
+            self._rate_limit_docs_api()
+            
+            # Single API call for the entire URL section
             self.docs_service.documents().batchUpdate(
                 documentId=doc_id,
                 body={
                     'requests': [
                         {
                             'insertText': {
-                                'location': {
-                                    'index': end_index
-                                },
-                                'text': "\n\n"
+                                'location': {'index': end_index},
+                                'text': combined_content
                             }
                         }
                     ]
                 }
             ).execute()
+            
         except Exception as e:
-                print(f"Error generating URL section for {url}: {e}")
-                import traceback
-                traceback.print_exc()
+            print(f"Error generating URL section for {url}: {e}")
+            import traceback
+            traceback.print_exc()
 
     def _generate_recommendations(self, doc_id, analysis):
         """
@@ -1797,3 +1481,10 @@ class StorytellingGenerator:
                 return self._share_document(doc_id, email, "writer")
             
             return False
+        
+    def _rate_limit_docs_api(self):
+            """
+            Add a small delay to avoid hitting Docs API rate limits.
+            Google Docs API allows 60 write operations per minute.
+            """
+            time.sleep(1.5)

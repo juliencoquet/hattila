@@ -1,0 +1,43 @@
+{
+  "property_id": "427363317",
+  "property_name": "Property 427363317",
+  "row_count": 544,
+  "date_range": {
+    "start": "2025-06-11",
+    "end": "2025-07-10",
+    "days": 30
+  },
+  "metrics_summary": {
+    "sessions_last_30_days": {
+      "total": 17635.0,
+      "average": 32.4172794117647,
+      "median": 3.0,
+      "min": 1.0,
+      "max": 604.0
+    },
+    "activeUsers_last_30_days": {
+      "total": 12989.0,
+      "average": 23.876838235294116,
+      "median": 2.0,
+      "min": 0.0,
+      "max": 477.0
+    },
+    "screenPageViews_last_30_days": {
+      "total": 105750.0,
+      "average": 194.3933823529412,
+      "median": 15.0,
+      "min": 0.0,
+      "max": 4038.0
+    }
+  },
+  "insights": [
+    {
+      "type": "traffic_source",
+      "finding": "The top traffic source is '(direct)' accounting for 5.5% of traffic"
+    },
+    {
+      "type": "summary",
+      "finding": "Analysis for Property 427363317 shows 1 key findings across traffic sources, geographic distribution, and user engagement."
+    }
+  ]
+}

@@ -25,57 +25,31 @@ def parse_arguments():
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(description='Google Analytics 4 Analysis Tool')
     
-    parser.add_argument('--config', default='config.json',
-                        help='Path to configuration file (default: config.json)')
-    
-    parser.add_argument('--key-file',
-                        help='Path to service account key file (overrides config file)')
-    
-    parser.add_argument('--property-id', required=True,
-                        help='GA4 property ID to analyze')
-    
-    parser.add_argument('--property-name',
-                        help='Friendly name for the GA4 property (default: uses property ID)')
-    
-    parser.add_argument('--urls',
-                        help='Path to CSV file with URLs to analyze (optional)')
-    
-    parser.add_argument('--output-dir',
-                        help='Directory to save results (overrides config file)')
-    
-    parser.add_argument('--metrics', 
-                        help='Comma-separated list of metrics (overrides config file)')
-    
-    parser.add_argument('--dimensions',
-                        help='Comma-separated list of dimensions (overrides config file)')
-    
-    parser.add_argument('--date-range',
-                        help='Date range in format "start_date,end_date" (e.g., "30daysAgo,yesterday")')
+    parser.add_argument('--config', default='config.json', help='Path to configuration file (default: config.json)')
+    parser.add_argument('--key-file', help='Path to service account key file (overrides config file)')
+    parser.add_argument('--property-id', required=True, help='GA4 property ID to analyze')
+    parser.add_argument('--property-name', help='Friendly name for the GA4 property (default: uses property ID)')
+    parser.add_argument('--urls', help='Path to CSV file with URLs to analyze (optional)')
+    parser.add_argument('--output-dir', help='Directory to save results (overrides config file)')
+    parser.add_argument('--metrics', help='Comma-separated list of metrics (overrides config file)')
+    parser.add_argument('--dimensions', help='Comma-separated list of dimensions (overrides config file)')
+    parser.add_argument('--date-range', help='Date range in format "start_date,end_date" (e.g., "30daysAgo,yesterday")')
     
     #Pagespeed
-    parser.add_argument('--pagespeed', action='store_true',
-                        help='Enable PageSpeed analysis for URLs (default: disabled)')
-    parser.add_argument('--pagespeed-key', 
-                        help='Google API key for PageSpeed Insights')
-    parser.add_argument('--pagespeed-max', type=int, default=10,
-                        help='Maximum number of URLs to analyze with PageSpeed (default: 10)')
+    parser.add_argument('--pagespeed', action='store_true', help='Enable PageSpeed analysis for URLs (default: disabled)')
+    parser.add_argument('--pagespeed-key', help='Google API key for PageSpeed Insights')
+    parser.add_argument('--pagespeed-max', type=int, default=10, help='Maximum number of URLs to analyze with PageSpeed (default: 10)')
     
     # Reporting integration
-    parser.add_argument('--generate-doc', action='store_true',
-                        help='Generate a Google Doc report from the analysis')
+    parser.add_argument('--generate-doc', action='store_true', help='Generate a Google Doc report from the analysis')
+    parser.add_argument('--google-credentials', help='Path to Google API service account credentials (for Google Docs integration)')
+    parser.add_argument('--doc-template', help='Google Doc template ID to use for the report')
+    parser.add_argument('--drive-folder', help='Google Drive folder ID to save the report in')
+    parser.add_argument('--report-language', default='en', help='Language for the report (en, fr, etc.)')
+    parser.add_argument('--doc-title', help='Custom title for the generated document')
+    parser.add_argument('--doc-language', default='en', help='Language for the document content (en, fr, es, etc.)')
     
-    parser.add_argument('--google-credentials',
-                        help='Path to Google API service account credentials (for Google Docs integration)')
-    
-    parser.add_argument('--doc-template',
-                        help='Google Doc template ID to use for the report')
-    
-    parser.add_argument('--drive-folder',
-                        help='Google Drive folder ID to save the report in')
-    
-    parser.add_argument('--report-language', default='en',
-                        help='Language for the report (en, fr, etc.)')
-
+    # Parse the arguments
     return parser.parse_args()
 
 def load_urls_from_file(file_path):
@@ -437,26 +411,7 @@ def main():
         print(f"Analysis failed for property {property_id}")
         sys.exit(1)
     
-    # Generate Google Doc report if requested
-    if args.generate_doc:
-        if not args.google_credentials:
-            print("\nError: --google-credentials is required for Google Doc generation")
-            sys.exit(1)
-        
-        print("\nGenerating Google Doc report...")
-        doc_id = reporting_integration.generate_google_doc_report(
-            analysis,  # This is the analysis result from the analyzer
-            args.google_credentials,
-            config,
-            template_id=args.doc_template,
-            folder_id=args.drive_folder,
-            language=args.report_language
-        )
-        
-        if doc_id:
-            print(f"Google Doc report created: https://docs.google.com/document/d/{doc_id}/edit")
-        else:
-            print("Failed to create Google Doc report")
+
     
     # Process URLs if provided
     if urls:
@@ -487,7 +442,7 @@ def main():
                 config,
                 template_id=args.doc_template,
                 folder_id=args.drive_folder,
-                language=args.report_language
+                language=args.doc_language
             )
             
             if url_doc_id:
